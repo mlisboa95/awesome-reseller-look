@@ -140,7 +140,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <ScrollIndicator />
+        
       </div>
     </section>
   );
