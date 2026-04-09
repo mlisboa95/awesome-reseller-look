@@ -18,8 +18,7 @@ const translations: Record<string, string> = {
   // Hero
   "hero.eyebrow": "AWS Marketplace Channel Partner",
   "hero.title1": "Technology solutions,",
-  "hero.title2": "delivered through AWS",
-  "hero.title3": "",
+  "hero.title2": "expertly delivered.",
   "hero.cta1": "Our Solutions",
   "hero.cta2": "Why Mahvla",
 
