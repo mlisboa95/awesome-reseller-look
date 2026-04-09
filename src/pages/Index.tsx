@@ -30,10 +30,10 @@ const Index = () => {
     <>
       <LoadingScreen />
       <div className="min-h-screen bg-white relative">
-        <Header />
-
         {/* Dark hero frame — sep2 style with white border all around */}
         <div className="mx-3 md:mx-5 mt-3 md:mt-5 rounded-[1.25rem] bg-background overflow-hidden relative">
+          <Header />
+
           {/* Animated SVG lines — contained within the hero frame */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
             <svg
@@ -49,17 +49,14 @@ const Index = () => {
                 <path id="hero-path-4" d="M 980 -30 C 1060 120, 1120 240, 1160 340 S 1230 500, 1320 560 C 1390 610, 1450 610, 1520 610" />
               </defs>
 
-              {/* Base gray tracks */}
               <use href="#hero-path-1" className="hero-track" />
               <use href="#hero-path-2" className="hero-track" />
               <use href="#hero-path-3" className="hero-track" />
               <use href="#hero-path-4" className="hero-track hero-track-light" />
 
-              {/* Moving orange segments */}
               <use href="#hero-path-2" className="hero-accent hero-accent-orange hero-dash-1" />
               <use href="#hero-path-4" className="hero-accent hero-accent-orange hero-dash-2" />
 
-              {/* Moving blue segments */}
               <use href="#hero-path-1" className="hero-accent hero-accent-blue hero-dash-3" />
               <use href="#hero-path-3" className="hero-accent hero-accent-blue hero-dash-4" />
             </svg>
