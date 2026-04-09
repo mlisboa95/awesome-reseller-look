@@ -1,4 +1,4 @@
-import { Menu, X, ExternalLink, ChevronDown } from "lucide-react";
+import { Menu, X, ExternalLink } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import logoMahvla from "@/assets/logo-mahvla-footer.png";
