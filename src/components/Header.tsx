@@ -15,7 +15,6 @@ const Header = () => {
     { label: t("nav.about"), href: "#sobre", isExternal: false },
     { label: t("nav.solutions"), href: "#servicos", isExternal: false },
     { label: t("nav.partners"), href: "#parceiros", isExternal: false },
-    { label: t("nav.atas"), href: "/atas", isExternal: true },
     { label: t("nav.compliance"), href: "/compliance", isExternal: true },
   ];
 
