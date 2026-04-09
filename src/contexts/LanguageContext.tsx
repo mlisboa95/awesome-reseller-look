@@ -27,7 +27,7 @@ const translations: Record<string, string> = {
   "about.label": "About Us",
   "about.title": "Over two decades delivering with",
   "about.titleHighlight": "consistency",
-  "about.description": "Founded in 2004, Grupo Mahvla is a technology integrator that has grown alongside its clients. Our model is to deepen long-term partnerships, project by project, with technical proximity, methodology, and transparency at every stage.",
+  "about.description": "Founded in 2004, Mahvla Group LLC is a technology integrator that has grown alongside its clients. Our model is to deepen long-term partnerships, project by project, with technical proximity, methodology, and transparency at every stage.",
   "about.stat1": "years of experience",
   "about.stat2": "active certifications",
   "about.stat3": "projects delivered",
@@ -74,10 +74,10 @@ const translations: Record<string, string> = {
   "cta.title": "Let's talk about your",
   "cta.titleHighlight": "project?",
   "cta.description": "Our technical team is ready to understand your scenario, evaluate your architecture and design the right integration for your environment.",
-  "cta.button": "Talk to Grupo Mahvla",
+  "cta.button": "Talk to Mahvla Group",
 
   // Footer
-  "footer.office": "Brasília Office",
+  "footer.office": "Offices",
   "footer.contact": "Contact",
   "footer.copyright": "All rights reserved.",
   "footer.privacy": "Privacy Policy",
