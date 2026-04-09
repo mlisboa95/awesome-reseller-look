@@ -6,26 +6,28 @@ import MagneticButton from "./MagneticButton";
 import RippleButton from "./RippleButton";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-// Partner logos for the hero strip
-import aristaLogo from "@/assets/partners/arista.jpg";
-import checkpointLogo from "@/assets/partners/checkpoint.jpg";
-import f5Logo from "@/assets/partners/f5.jpg";
-import hpeLogo from "@/assets/partners/hpe.jpg";
-import nutanixLogo from "@/assets/partners/nutanix.jpg";
-import extremeLogo from "@/assets/partners/extreme.jpg";
-import thalesLogo from "@/assets/partners/thales.jpg";
-import trendLogo from "@/assets/partners/trend.jpg";
+// Partner logos (SVG/PNG, white on transparent)
+import awsLogo from "@/assets/partners/aws.svg";
+import checkpointLogo from "@/assets/partners/checkpoint.svg";
+import exagridLogo from "@/assets/partners/exagrid.svg";
+import extremeLogo from "@/assets/partners/extreme.svg";
+import gigamonLogo from "@/assets/partners/gigamon.png";
+import hpeLogo from "@/assets/partners/hpe.svg";
+import nutanixLogo from "@/assets/partners/nutanix.svg";
+import riverbedLogo from "@/assets/partners/riverbed.svg";
+import veeamLogo from "@/assets/partners/veeam.svg";
 
+// Alphabetical order, with individual height tuning for visual balance
 const heroPartners = [
-  { name: "AWS", logo: null },
-  { name: "F5", logo: f5Logo },
-  { name: "Check Point", logo: checkpointLogo },
-  { name: "Arista", logo: aristaLogo },
-  { name: "HPE", logo: hpeLogo },
-  { name: "Nutanix", logo: nutanixLogo },
-  { name: "Extreme", logo: extremeLogo },
-  { name: "Thales", logo: thalesLogo },
-  { name: "Trend Micro", logo: trendLogo },
+  { name: "AWS", logo: awsLogo, h: "h-7 md:h-9" },
+  { name: "Check Point", logo: checkpointLogo, h: "h-5 md:h-6" },
+  { name: "ExaGrid", logo: exagridLogo, h: "h-5 md:h-6" },
+  { name: "Extreme Networks", logo: extremeLogo, h: "h-5 md:h-7" },
+  { name: "Gigamon", logo: gigamonLogo, h: "h-5 md:h-6" },
+  { name: "HPE", logo: hpeLogo, h: "h-6 md:h-8" },
+  { name: "Nutanix", logo: nutanixLogo, h: "h-5 md:h-6" },
+  { name: "Riverbed", logo: riverbedLogo, h: "h-6 md:h-7" },
+  { name: "Veeam", logo: veeamLogo, h: "h-6 md:h-7" },
 ];
 
 const HeroSection = () => {
@@ -39,6 +41,9 @@ const HeroSection = () => {
   }, []);
 
   const contentOpacity = Math.max(0, 1 - scrollY / 600);
+
+  // Duplicate for seamless loop
+  const doubled = [...heroPartners, ...heroPartners];
 
   return (
     <section id="solucoes" className="relative flex flex-col">
@@ -95,28 +100,26 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Partner logo strip at bottom of hero */}
-      <div className="relative z-10">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-6">
-          <div className="flex items-center gap-8 md:gap-12 flex-wrap justify-start">
-            {heroPartners.map((partner) =>
-              partner.logo ? (
+      {/* Partner carousel — contained within hero dark area */}
+      <div className="relative z-10 overflow-hidden">
+        <div className="py-6">
+          <div
+            className="flex animate-scroll-left-slow"
+            style={{ width: "max-content" }}
+          >
+            {doubled.map((partner, i) => (
+              <div
+                key={`${partner.name}-${i}`}
+                className="flex-shrink-0 px-6 md:px-10 flex items-center justify-center h-14"
+              >
                 <img
-                  key={partner.name}
                   src={partner.logo}
                   alt={partner.name}
-                  className="h-8 md:h-10 w-auto object-contain opacity-40 hover:opacity-80 transition-opacity duration-300 flex-shrink-0 grayscale"
+                  className={`${partner.h} w-auto object-contain opacity-50 hover:opacity-90 transition-opacity duration-300`}
                   draggable={false}
                 />
-              ) : (
-                <span
-                  key={partner.name}
-                  className="flex-shrink-0 text-lg md:text-xl font-bold text-foreground/40 hover:text-foreground/80 transition-opacity duration-300 tracking-wide"
-                >
-                  ☁️ {partner.name}
-                </span>
-              )
-            )}
+              </div>
+            ))}
           </div>
         </div>
       </div>
