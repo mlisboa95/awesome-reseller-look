@@ -41,7 +41,7 @@ const HeroSection = () => {
   const contentOpacity = Math.max(0, 1 - scrollY / 600);
 
   return (
-    <section id="solucoes" className="relative flex flex-col min-h-screen">
+    <section id="solucoes" className="relative flex flex-col">
       {/* Subtle orange glow */}
       <div
         className="absolute top-1/3 left-0 w-[500px] h-[400px] opacity-[0.04] pointer-events-none"
@@ -53,7 +53,7 @@ const HeroSection = () => {
 
       {/* Main content */}
       <div
-        className="flex-1 flex items-center w-full max-w-[1400px] mx-auto px-6 lg:px-12 pt-32 pb-12 relative z-10"
+        className="flex-1 flex items-center w-full max-w-[1400px] mx-auto px-6 lg:px-12 pt-24 pb-8 relative z-10"
         style={{ opacity: contentOpacity }}
       >
         <div className="max-w-3xl text-left">
@@ -66,7 +66,7 @@ const HeroSection = () => {
           </TextReveal>
 
           <TextReveal delay={800}>
-            <div className="flex flex-col sm:flex-row gap-4 mt-10">
+            <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <MagneticButton strength={0.15}>
                 <RippleButton
                   href="#servicos"
