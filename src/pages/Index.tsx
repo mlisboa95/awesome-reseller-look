@@ -33,7 +33,7 @@ const Index = () => {
         <Header />
 
         {/* Dark hero frame — sep2 style */}
-        <div className="mx-3 md:mx-5 mt-3 md:mt-5 rounded-[1.25rem] bg-background overflow-hidden relative">
+        <div className="mx-3 md:mx-5 mt-3 md:mt-5 rounded-[1.25rem] bg-background overflow-hidden relative pt-[72px]">
           {/* Animated SVG lines — contained within the hero frame */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
             <svg
