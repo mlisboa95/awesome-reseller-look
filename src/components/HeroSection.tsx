@@ -19,15 +19,15 @@ import veeamLogo from "@/assets/partners/veeam.svg";
 
 // Alphabetical order, with individual height tuning for visual balance
 const heroPartners = [
-  { name: "AWS", logo: awsLogo, h: "h-7 md:h-9" },
+  { name: "AWS", logo: awsLogo, h: "h-6 md:h-7" },
   { name: "Check Point", logo: checkpointLogo, h: "h-5 md:h-6" },
   { name: "ExaGrid", logo: exagridLogo, h: "h-5 md:h-6" },
-  { name: "Extreme Networks", logo: extremeLogo, h: "h-5 md:h-7" },
+  { name: "Extreme Networks", logo: extremeLogo, h: "h-5 md:h-6" },
   { name: "Gigamon", logo: gigamonLogo, h: "h-5 md:h-6" },
-  { name: "HPE", logo: hpeLogo, h: "h-6 md:h-8" },
+  { name: "HPE", logo: hpeLogo, h: "h-5 md:h-6" },
   { name: "Nutanix", logo: nutanixLogo, h: "h-5 md:h-6" },
-  { name: "Riverbed", logo: riverbedLogo, h: "h-6 md:h-7" },
-  { name: "Veeam", logo: veeamLogo, h: "h-6 md:h-7" },
+  { name: "Riverbed", logo: riverbedLogo, h: "h-8 md:h-10" },
+  { name: "Veeam", logo: veeamLogo, h: "h-8 md:h-10" },
 ];
 
 const HeroSection = () => {
@@ -115,7 +115,7 @@ const HeroSection = () => {
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className={`${partner.h} w-auto object-contain opacity-50 hover:opacity-90 transition-opacity duration-300`}
+                  className={`${partner.h} w-auto object-contain opacity-90`}
                   draggable={false}
                 />
               </div>
