@@ -6,24 +6,24 @@
 
 @layer base {
   :root {
-    /* SEP2-Inspired Dark Theme — Orange Accent */
-    --background: 0 0% 9%;
+    /* SEP2-Inspired Dark Theme — Warm Charcoal + Orange Accent */
+    --background: 0 0% 22%;
     --foreground: 0 0% 98%;
 
-    --card: 0 0% 12%;
+    --card: 0 0% 18%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 12%;
+    --popover: 0 0% 18%;
     --popover-foreground: 0 0% 98%;
 
     --primary: 24 100% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 15%;
+    --secondary: 0 0% 26%;
     --secondary-foreground: 0 0% 90%;
 
-    --muted: 0 0% 18%;
-    --muted-foreground: 0 0% 55%;
+    --muted: 0 0% 28%;
+    --muted-foreground: 0 0% 60%;
 
     --accent: 24 100% 50%;
     --accent-foreground: 0 0% 100%;
@@ -34,13 +34,13 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 18%;
-    --input: 0 0% 15%;
+    --border: 0 0% 30%;
+    --input: 0 0% 26%;
     --ring: 24 100% 50%;
 
     --radius: 0.75rem;
 
-    --partners-bg: 0 0% 7%;
+    --partners-bg: 0 0% 16%;
     --metallic-gray: 0 0% 40%;
 
     /* Gradients — Orange */
