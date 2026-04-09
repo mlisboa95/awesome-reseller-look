@@ -31,19 +31,28 @@ const Footer = forwardRef<HTMLElement, FooterProps>(({ showCta = true }, ref) =>
             </p>
           </div>
 
-          {/* Office */}
+          {/* Offices */}
           <div>
             <h4 className="text-primary font-display font-semibold text-base mb-6">
               {t("footer.office")}
             </h4>
-            <address className="not-italic text-muted-foreground text-sm leading-relaxed space-y-3">
+            <address className="not-italic text-muted-foreground text-sm leading-relaxed space-y-5">
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
                 <div>
+                  <p className="text-foreground font-medium mb-1">Boca Raton, FL</p>
+                  <p>5550 Glades Road, Suite 511</p>
+                  <p>Boca Raton, FL 33431</p>
+                  <p>United States</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <MapPin className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
+                <div>
+                  <p className="text-foreground font-medium mb-1">Brasília, DF</p>
                   <p>SRTVS Qd 701 Cj. L N. 38</p>
                   <p>Bloco 01, Salas 8, 9 e 10</p>
-                  <p>Asa Sul, Brasília - DF</p>
-                  <p className="text-muted-foreground/60 mt-1">CEP: 70340-906</p>
+                  <p>Asa Sul, Brasília - DF, Brazil</p>
                 </div>
               </div>
             </address>
@@ -76,7 +85,7 @@ const Footer = forwardRef<HTMLElement, FooterProps>(({ showCta = true }, ref) =>
       <div className="border-t border-border">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-muted-foreground/60 text-sm">
-            © {new Date().getFullYear()} Grupo Mahvla — {t("footer.copyright")}
+            © {new Date().getFullYear()} Mahvla Group LLC — {t("footer.copyright")}
           </p>
           <div className="flex items-center gap-6">
             <a href="/privacidade" className="text-muted-foreground/60 text-sm hover:text-primary transition-colors underline underline-offset-4">
