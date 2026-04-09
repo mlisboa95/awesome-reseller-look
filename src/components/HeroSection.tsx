@@ -43,6 +43,10 @@ const HeroSection = () => {
   return (
     <section id="solucoes" className="relative flex flex-col">
       <div className="relative min-h-screen flex flex-col overflow-hidden bg-background">
+
+        {/* Frame border with rounded corners — sep2 style */}
+        <div className="absolute inset-3 md:inset-4 rounded-2xl border border-white/[0.12] pointer-events-none z-20" />
+
         {/* Animated SVG curved lines — sep2 style */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <svg
@@ -51,79 +55,78 @@ const HeroSection = () => {
             preserveAspectRatio="none"
             fill="none"
           >
-            {/* Gray flowing curves */}
+            {/* Main gray flowing curves — thick and visible like sep2 */}
             <path
-              d="M800 -100 Q900 200 850 400 Q800 600 900 900"
-              stroke="hsla(0, 0%, 50%, 0.12)"
-              strokeWidth="1.5"
+              d="M700 -100 C750 150, 680 350, 720 500 C760 650, 850 750, 900 950"
+              stroke="hsla(0, 0%, 45%, 0.25)"
+              strokeWidth="2"
               className="hero-curve hero-curve-1"
             />
             <path
-              d="M900 -50 Q1000 250 950 450 Q900 650 1050 950"
-              stroke="hsla(0, 0%, 50%, 0.08)"
-              strokeWidth="1"
+              d="M820 -80 C870 180, 800 320, 830 500 C860 680, 950 800, 1000 950"
+              stroke="hsla(0, 0%, 45%, 0.2)"
+              strokeWidth="2"
               className="hero-curve hero-curve-2"
             />
             <path
-              d="M1000 -80 Q1100 180 1080 380 Q1060 580 1200 920"
-              stroke="hsla(0, 0%, 50%, 0.1)"
-              strokeWidth="1.5"
+              d="M950 -60 C1000 200, 930 380, 970 520 C1010 660, 1100 780, 1150 950"
+              stroke="hsla(0, 0%, 45%, 0.22)"
+              strokeWidth="2"
               className="hero-curve hero-curve-3"
             />
             <path
-              d="M1100 -30 Q1200 220 1150 420 Q1100 620 1300 900"
-              stroke="hsla(0, 0%, 50%, 0.06)"
-              strokeWidth="1"
+              d="M1080 -40 C1130 180, 1060 350, 1100 500 C1140 650, 1220 780, 1280 950"
+              stroke="hsla(0, 0%, 45%, 0.18)"
+              strokeWidth="2"
               className="hero-curve hero-curve-4"
             />
-
-            {/* Orange accent curve */}
             <path
-              d="M850 -60 Q950 250 920 480 Q890 710 980 950"
-              stroke="hsla(24, 100%, 50%, 0.15)"
+              d="M1200 -20 C1250 220, 1180 400, 1220 550 C1260 700, 1340 800, 1400 950"
+              stroke="hsla(0, 0%, 45%, 0.15)"
               strokeWidth="1.5"
+              className="hero-curve hero-curve-5"
+            />
+
+            {/* Orange accent curve — prominent */}
+            <path
+              d="M780 -70 C830 200, 750 380, 800 530 C850 680, 920 800, 960 950"
+              stroke="hsla(24, 100%, 50%, 0.3)"
+              strokeWidth="2"
               className="hero-curve hero-curve-orange"
             />
 
             {/* Blue/cyan accent curve */}
             <path
-              d="M1050 -40 Q1150 300 1120 500 Q1090 700 1250 950"
-              stroke="hsla(200, 80%, 55%, 0.12)"
+              d="M1120 -30 C1170 250, 1100 420, 1150 580 C1200 740, 1300 840, 1380 950"
+              stroke="hsla(200, 80%, 55%, 0.2)"
               strokeWidth="1.5"
               className="hero-curve hero-curve-blue"
             />
 
-            {/* Additional subtle curves for depth */}
+            {/* Extra subtle background curves for depth */}
             <path
-              d="M750 -120 Q850 150 820 350 Q790 550 850 850"
-              stroke="hsla(0, 0%, 45%, 0.06)"
-              strokeWidth="1"
-              className="hero-curve hero-curve-5"
+              d="M600 -140 C650 100, 580 300, 620 460 C660 620, 740 740, 800 950"
+              stroke="hsla(0, 0%, 42%, 0.12)"
+              strokeWidth="1.5"
+              className="hero-curve hero-curve-6"
             />
             <path
-              d="M1150 0 Q1250 280 1200 500 Q1150 720 1350 950"
-              stroke="hsla(0, 0%, 45%, 0.05)"
-              strokeWidth="1"
-              className="hero-curve hero-curve-6"
+              d="M1300 0 C1350 250, 1280 420, 1320 580 C1360 740, 1420 840, 1440 950"
+              stroke="hsla(0, 0%, 42%, 0.1)"
+              strokeWidth="1.5"
+              className="hero-curve hero-curve-1"
             />
           </svg>
         </div>
 
         {/* Subtle orange glow */}
         <div
-          className="absolute top-1/3 left-0 w-[500px] h-[400px] opacity-[0.06]"
+          className="absolute top-1/3 left-0 w-[500px] h-[400px] opacity-[0.04]"
           style={{
             background: "radial-gradient(ellipse at center, hsl(24, 100%, 50%) 0%, transparent 70%)",
             filter: "blur(120px)",
           }}
         />
-
-        {/* Frame / border effect — sep2 style */}
-        <div className="absolute inset-0 pointer-events-none z-20">
-          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/[0.08] to-transparent" />
-          <div className="absolute inset-y-0 left-0 w-px bg-gradient-to-b from-white/[0.06] via-white/[0.03] to-transparent" />
-          <div className="absolute inset-y-0 right-0 w-px bg-gradient-to-b from-white/[0.06] via-white/[0.03] to-transparent" />
-        </div>
 
         {/* Main content */}
         <div
@@ -170,7 +173,7 @@ const HeroSection = () => {
         </div>
 
         {/* Partner logo strip at bottom of hero */}
-        <div className="relative z-10 bg-background/50 backdrop-blur-sm">
+        <div className="relative z-10">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-6">
             <div className="flex items-center gap-8 md:gap-12 flex-wrap justify-start">
               {heroPartners.map((partner) =>
