@@ -48,23 +48,22 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="servicos" className="py-20 md:py-28 relative overflow-hidden bg-card">
+    <section id="servicos" className="py-20 md:py-28 relative overflow-hidden bg-gray-50">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
         <div
           ref={headerRef}
           className={`text-center max-w-3xl mx-auto mb-14 scroll-fade-up ${headerVisible ? 'visible' : ''}`}
         >
-          <span className="badge-pill mb-6">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase border border-primary/30 text-primary bg-primary/5 mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-primary" />
             {t("services.label")}
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight text-foreground leading-[1.1]">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight text-gray-900 leading-[1.1]">
             {t("services.title")}{" "}
             <span className="text-primary">{t("services.titleHighlight")}</span>
           </h2>
         </div>
 
-        {/* Main service cards — sep2 style */}
         <div
           ref={gridRef}
           className={`stagger-children ${gridVisible ? 'visible' : ''}`}
@@ -73,39 +72,38 @@ const ServicesSection = () => {
             {services.map((service) => (
               <div
                 key={service.title}
-                className="group relative p-7 rounded-2xl bg-background border border-border hover:border-primary/30 transition-all duration-400 card-hover"
+                className="group relative p-7 rounded-2xl bg-white border border-gray-200 hover:border-primary/30 hover:shadow-lg transition-all duration-400"
               >
                 <div className="flex items-start justify-between mb-5">
                   <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/15 transition-colors duration-300">
                     <service.icon className="w-7 h-7 text-primary" />
                   </div>
-                  <div className="service-card-arrow">
+                  <div className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center transition-all duration-300 group-hover:border-primary group-hover:bg-primary group-hover:text-white">
                     <ArrowRight className="w-4 h-4" />
                   </div>
                 </div>
-                <h3 className="text-xl font-display font-bold text-foreground mb-2">{service.title}</h3>
+                <h3 className="text-xl font-display font-bold text-gray-900 mb-2">{service.title}</h3>
                 <p className="text-xs font-medium text-primary/70 mb-3 tracking-wide">{service.tags}</p>
-                <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">{service.description}</p>
+                <p className="text-sm text-gray-500 leading-relaxed line-clamp-3">{service.description}</p>
               </div>
             ))}
           </div>
 
-          {/* Other services — compact row */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {otherServices.map((service) => (
               <div
                 key={service.title}
-                className="group relative p-6 rounded-2xl bg-background border border-border hover:border-primary/30 transition-all duration-400 card-hover"
+                className="group relative p-6 rounded-2xl bg-white border border-gray-200 hover:border-primary/30 hover:shadow-lg transition-all duration-400"
               >
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/15 transition-colors duration-300">
                     <service.icon className="w-6 h-6 text-primary" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-display font-bold text-foreground mb-1">{service.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
+                    <h3 className="text-lg font-display font-bold text-gray-900 mb-1">{service.title}</h3>
+                    <p className="text-sm text-gray-500 leading-relaxed">{service.description}</p>
                   </div>
-                  <div className="service-card-arrow flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:border-primary group-hover:bg-primary group-hover:text-white">
                     <ArrowRight className="w-4 h-4" />
                   </div>
                 </div>

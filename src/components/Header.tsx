@@ -47,7 +47,7 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-background/90 backdrop-blur-xl border-b border-border/50'
+          ? 'bg-white shadow-sm border-b border-gray-200/60'
           : 'bg-transparent'
       }`}
     >
@@ -64,8 +64,10 @@ const Header = () => {
         >
           <img
             src={logoMahvla}
-            alt="Mahvla Grupo"
-            className="h-16 md:h-20 w-auto transition-all duration-300 group-hover:opacity-80"
+            alt="Mahvla Group"
+            className={`h-16 md:h-20 w-auto transition-all duration-300 group-hover:opacity-80 ${
+              scrolled ? 'brightness-0' : ''
+            }`}
           />
         </a>
 
@@ -76,7 +78,9 @@ const Header = () => {
               {link.isExternal ? (
                 <Link
                   to={link.href}
-                  className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 relative group"
+                  className={`text-sm font-medium transition-colors duration-300 relative group ${
+                    scrolled ? 'text-gray-600 hover:text-gray-900' : 'text-muted-foreground hover:text-foreground'
+                  }`}
                 >
                   {link.label}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
@@ -85,7 +89,9 @@ const Header = () => {
                 <a
                   href={link.href}
                   onClick={(e) => handleSectionClick(e, link.href)}
-                  className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 cursor-pointer relative group"
+                  className={`text-sm font-medium transition-colors duration-300 cursor-pointer relative group ${
+                    scrolled ? 'text-gray-600 hover:text-gray-900' : 'text-muted-foreground hover:text-foreground'
+                  }`}
                 >
                   {link.label}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
@@ -111,7 +117,9 @@ const Header = () => {
         {/* Mobile menu button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden ml-auto p-2 text-muted-foreground hover:text-foreground transition-colors"
+          className={`lg:hidden ml-auto p-2 transition-colors ${
+            scrolled ? 'text-gray-600 hover:text-gray-900' : 'text-muted-foreground hover:text-foreground'
+          }`}
         >
           {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
@@ -121,7 +129,7 @@ const Header = () => {
       <div
         className={`
           lg:hidden absolute top-full left-0 right-0
-          bg-background/95 backdrop-blur-xl border-b border-border
+          ${scrolled ? 'bg-white border-b border-gray-200' : 'bg-background/95 backdrop-blur-xl border-b border-border'}
           transition-all duration-300 overflow-hidden
           ${mobileMenuOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'}
         `}
@@ -133,7 +141,9 @@ const Header = () => {
                 key={link.label}
                 to={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-lg font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
+                className={`text-lg font-medium transition-colors py-2 ${
+                  scrolled ? 'text-gray-600 hover:text-gray-900' : 'text-muted-foreground hover:text-foreground'
+                }`}
               >
                 {link.label}
               </Link>
@@ -142,7 +152,9 @@ const Header = () => {
                 key={link.label}
                 href={link.href}
                 onClick={(e) => handleSectionClick(e, link.href)}
-                className="text-lg font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
+                className={`text-lg font-medium transition-colors py-2 ${
+                  scrolled ? 'text-gray-600 hover:text-gray-900' : 'text-muted-foreground hover:text-foreground'
+                }`}
               >
                 {link.label}
               </a>
