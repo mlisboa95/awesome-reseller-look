@@ -9,62 +9,62 @@ const Privacidade = () => {
 
   const sections = [
     {
-      title: "1. Introdução",
-      content: "O Grupo Mahvla está comprometido com a proteção da privacidade e dos dados pessoais de seus clientes, parceiros e visitantes. Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos suas informações pessoais em conformidade com a Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018)."
+      title: "1. Introduction",
+      content: "Mahvla Group LLC is committed to protecting the privacy and personal data of its clients, partners, and website visitors. This Privacy Policy describes how we collect, use, store, and protect your personal information in compliance with applicable data protection laws, including the California Consumer Privacy Act (CCPA) and other relevant U.S. regulations."
     },
     {
-      title: "2. Dados Coletados",
-      content: "Podemos coletar os seguintes tipos de informações:",
+      title: "2. Data We Collect",
+      content: "We may collect the following types of information:",
       list: [
-        "Dados de identificação: nome, e-mail, telefone, cargo e empresa",
-        "Dados de navegação: endereço IP, tipo de navegador, páginas visitadas",
-        "Cookies e tecnologias similares para melhorar a experiência do usuário",
-        "Informações fornecidas voluntariamente através de formulários de contato"
+        "Identification data: name, email address, phone number, job title, and company",
+        "Browsing data: IP address, browser type, pages visited",
+        "Cookies and similar technologies to enhance user experience",
+        "Information voluntarily provided through contact forms"
       ]
     },
     {
-      title: "3. Uso dos Dados",
-      content: "Utilizamos seus dados para:",
+      title: "3. How We Use Your Data",
+      content: "We use your data to:",
       list: [
-        "Fornecer e melhorar nossos serviços",
-        "Responder a solicitações e dúvidas",
-        "Enviar comunicações relevantes sobre nossos produtos e serviços",
-        "Cumprir obrigações legais e regulatórias",
-        "Analisar o uso do site para melhorar a experiência do usuário"
+        "Provide and improve our services",
+        "Respond to inquiries and requests",
+        "Send relevant communications about our products and services",
+        "Comply with legal and regulatory obligations",
+        "Analyze website usage to improve the user experience"
       ]
     },
     {
       title: "4. Cookies",
-      content: "Utilizamos cookies para:",
+      content: "We use cookies for the following purposes:",
       list: [
-        "Cookies essenciais: necessários para o funcionamento do site",
-        "Cookies de preferência: armazenam suas preferências de navegação",
-        "Cookies analíticos: nos ajudam a entender como você usa o site"
+        "Essential cookies: required for the website to function properly",
+        "Preference cookies: store your browsing preferences",
+        "Analytical cookies: help us understand how you use the website"
       ],
-      extra: "Você pode gerenciar suas preferências de cookies através das configurações do seu navegador."
+      extra: "You can manage your cookie preferences through your browser settings."
     },
     {
-      title: "5. Compartilhamento de Dados",
-      content: "Não vendemos, alugamos ou compartilhamos suas informações pessoais com terceiros para fins de marketing. Podemos compartilhar dados apenas com parceiros de negócios que nos auxiliam na prestação de serviços, sempre mediante acordos de confidencialidade e em conformidade com a LGPD."
+      title: "5. Data Sharing",
+      content: "We do not sell, rent, or share your personal information with third parties for marketing purposes. We may share data only with business partners who assist us in providing our services, always under confidentiality agreements and in compliance with applicable privacy laws."
     },
     {
-      title: "6. Segurança dos Dados",
-      content: "Implementamos medidas técnicas e organizacionais apropriadas para proteger seus dados pessoais contra acesso não autorizado, alteração, divulgação ou destruição. Nossas certificações ISO 9001:2015, ISO 14001:2015 e ISO 37001:2017 refletem nosso compromisso com a qualidade e segurança."
+      title: "6. Data Security",
+      content: "We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. Our commitment to quality and security is reflected in our operational standards and certifications."
     },
     {
-      title: "7. Seus Direitos",
-      content: "De acordo com a LGPD, você tem direito a:",
+      title: "7. Your Rights",
+      content: "Depending on your jurisdiction, you may have the right to:",
       list: [
-        "Confirmar a existência de tratamento de seus dados",
-        "Acessar seus dados pessoais",
-        "Corrigir dados incompletos, inexatos ou desatualizados",
-        "Solicitar a anonimização, bloqueio ou eliminação de dados desnecessários",
-        "Revogar o consentimento a qualquer momento"
+        "Access and review your personal data",
+        "Request correction of inaccurate or incomplete data",
+        "Request deletion of your personal data",
+        "Opt out of the sale or sharing of your personal information",
+        "Withdraw consent at any time"
       ]
     },
     {
-      title: "8. Contato",
-      content: "Para exercer seus direitos ou esclarecer dúvidas sobre esta Política de Privacidade, entre em contato conosco:",
+      title: "8. Contact",
+      content: "To exercise your rights or ask questions about this Privacy Policy, please contact us:",
       contact: true
     }
   ];
@@ -82,15 +82,15 @@ const Privacidade = () => {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
               <Shield className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">LGPD Compliant</span>
+              <span className="text-sm font-medium text-primary">Privacy Compliant</span>
             </div>
             
             <h1 className="text-4xl md:text-5xl font-display font-bold tracking-tight text-foreground mb-4 leading-[1.1]">
-              Política de <span className="text-primary">Privacidade</span>
+              Privacy <span className="text-primary">Policy</span>
             </h1>
             
             <p className="text-muted-foreground">
-              Última atualização: {new Date().toLocaleDateString('pt-BR')}
+              Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
             </p>
           </div>
 
@@ -131,16 +131,14 @@ const Privacidade = () => {
                 {section.contact && (
                   <div className="mt-4 space-y-2">
                     <p className="text-foreground">
-                      <span className="text-muted-foreground">E-mail:</span>{" "}
-                      <a href="mailto:privacidade@mahvla.com.br" className="text-primary hover:underline">
-                        privacidade@mahvla.com.br
+                      <span className="text-muted-foreground">Email:</span>{" "}
+                      <a href="mailto:privacy@mahvla.com" className="text-primary hover:underline">
+                        privacy@mahvla.com
                       </a>
                     </p>
                     <p className="text-foreground">
-                      <span className="text-muted-foreground">Telefone:</span>{" "}
-                      <a href="tel:+556121914900" className="text-primary hover:underline">
-                        +55 (61) 2191-4900
-                      </a>
+                      <span className="text-muted-foreground">Address:</span>{" "}
+                      <span className="text-muted-foreground">5550 Glades Road, Suite 511, Boca Raton, FL 33431, United States</span>
                     </p>
                   </div>
                 )}
