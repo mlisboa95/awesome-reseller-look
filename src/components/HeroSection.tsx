@@ -28,8 +28,8 @@ const heroPartners = [
   { name: "Gigamon", logo: gigamonLogo, h: "h-5 md:h-6" },
   { name: "HPE", logo: hpeLogo, h: "h-5 md:h-6" },
   { name: "Nutanix", logo: nutanixLogo, h: "h-5 md:h-6" },
-  { name: "Riverbed", logo: riverbedLogo, h: "h-8 md:h-10" },
-  { name: "Veeam", logo: veeamLogo, h: "h-8 md:h-10" },
+  { name: "Riverbed", logo: riverbedLogo, h: "h-12 md:h-14" },
+  { name: "Veeam", logo: veeamLogo, h: "h-12 md:h-14" },
 ];
 
 const HeroSection = () => {
