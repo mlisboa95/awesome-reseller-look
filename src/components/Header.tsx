@@ -1,0 +1,205 @@
+import { Menu, X, ExternalLink } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import logoMahvla from "@/assets/logo-mahvla-footer.png";
+import MagneticButton from "./MagneticButton";
+import { useLanguage } from "@/contexts/LanguageContext";
+
+const Header = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { language, setLanguage, t } = useLanguage();
+
+  const navLinks = [
+    { label: t("nav.about"), href: "#sobre", isExternal: false },
+    { label: t("nav.solutions"), href: "#servicos", isExternal: false },
+    { label: t("nav.partners"), href: "#parceiros", isExternal: false },
+    { label: t("nav.atas"), href: "/atas", isExternal: true },
+    { label: t("nav.compliance"), href: "/compliance", isExternal: true },
+  ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      const headerOffset = 100;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
+  const handleSectionClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    
+    if (location.pathname !== "/") {
+      navigate("/" + href);
+    } else {
+      scrollToSection(href);
+    }
+    setMobileMenuOpen(false);
+  };
+
+  return (
+    <header 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled 
+          ? 'bg-background/80 backdrop-blur-xl border-b border-border/50 shadow-lg shadow-black/5' 
+          : 'bg-transparent'
+      }`}
+    >
+      {/* Top bar */}
+      <div className={`border-b border-white/10 transition-all duration-300 ${scrolled ? 'hidden' : 'block'}`}>
+        <div className="container mx-auto px-6 py-2 flex items-center justify-end gap-6 text-xs text-muted-foreground">
+          <a href="mailto:contato@mahvla.com.br" className="hover:text-primary transition-colors">
+            contato@mahvla.com.br
+          </a>
+          <span>|</span>
+          <a href="tel:+556121914900" className="hover:text-primary transition-colors">
+            +55 (61) 2191-4900
+          </a>
+        </div>
+      </div>
+      
+      <div className="container mx-auto px-6 flex items-center py-4">
+        <a 
+          href="/" 
+          onClick={(e) => {
+            if (location.pathname === "/") {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+          }}
+          className="flex items-center gap-3 group"
+        >
+          <img 
+            src={logoMahvla} 
+            alt="Mahvla Grupo" 
+            className="h-20 md:h-24 w-auto transition-all duration-300 group-hover:opacity-80"
+          />
+        </a>
+
+        <nav className="hidden md:flex items-center gap-8 ml-auto mr-8">
+          {navLinks.map((link) => (
+            <MagneticButton key={link.label} strength={0.2}>
+              {link.isExternal ? (
+                <Link
+                  to={link.href}
+                  className="text-sm font-medium transition-all duration-300 text-muted-foreground hover:text-foreground relative group"
+                >
+                  {link.label}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+                </Link>
+              ) : (
+                <a
+                  href={link.href}
+                  onClick={(e) => handleSectionClick(e, link.href)}
+                  className="text-sm font-medium transition-all duration-300 cursor-pointer text-muted-foreground hover:text-foreground relative group"
+                >
+                  {link.label}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+                </a>
+              )}
+            </MagneticButton>
+          ))}
+        </nav>
+        
+        <div className="hidden md:flex items-center gap-4">
+          {/* Language Toggle */}
+          <button
+            onClick={() => setLanguage(language === "pt" ? "en" : "pt")}
+            className="px-4 py-2 text-xs font-bold tracking-wider rounded-xl bg-primary/15 text-primary border border-primary/30 hover:bg-primary hover:text-primary-foreground transition-all duration-300 uppercase"
+          >
+            {language === "pt" ? "EN" : "PT"}
+          </button>
+
+          <MagneticButton>
+            <a
+              href="https://suporte.mahvla.com.br"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:scale-105"
+            >
+              {t("nav.portal")}
+              <ExternalLink className="w-4 h-4" />
+            </a>
+          </MagneticButton>
+        </div>
+
+        {/* Mobile menu button */}
+        <div className="md:hidden flex items-center gap-3 ml-auto">
+          <button
+            onClick={() => setLanguage(language === "pt" ? "en" : "pt")}
+            className="px-4 py-2 text-xs font-bold tracking-wider rounded-xl bg-primary/15 text-primary border border-primary/30 hover:bg-primary hover:text-primary-foreground transition-all duration-300 uppercase"
+          >
+            {language === "pt" ? "EN" : "PT"}
+          </button>
+          <button 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="p-2 text-muted-foreground hover:text-foreground transition-colors"
+          >
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <div 
+        className={`
+          md:hidden absolute top-full left-0 right-0 
+          bg-background/95 backdrop-blur-xl border-b border-border
+          transition-all duration-300 overflow-hidden
+          ${mobileMenuOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'}
+        `}
+      >
+        <nav className="container mx-auto px-6 py-6 flex flex-col gap-4">
+          {navLinks.map((link) => (
+            link.isExternal ? (
+              <Link
+                key={link.label}
+                to={link.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-lg font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
+              >
+                {link.label}
+              </Link>
+            ) : (
+              <a
+                key={link.label}
+                href={link.href}
+                onClick={(e) => handleSectionClick(e, link.href)}
+                className="text-lg font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
+              >
+                {link.label}
+              </a>
+            )
+          ))}
+          <a
+            href="https://suporte.mahvla.com.br"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold rounded-xl bg-primary text-primary-foreground mt-4"
+          >
+            {t("nav.portal")}
+            <ExternalLink className="w-4 h-4" />
+          </a>
+        </nav>
+      </div>
+    </header>
+  );
+};
+
+export default Header;
