@@ -60,7 +60,7 @@ const HeroSection = () => {
 
       {/* Main content */}
       <div
-        className="flex-1 flex items-center w-full max-w-[1400px] mx-auto px-6 lg:px-12 pt-24 pb-8 relative z-10"
+        className="flex-1 flex items-center w-full max-w-[1400px] mx-auto px-6 lg:px-12 pt-40 md:pt-44 pb-8 relative z-10"
         style={{ opacity: contentOpacity }}
       >
         <div className="max-w-3xl text-left">
