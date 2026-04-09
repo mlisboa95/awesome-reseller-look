@@ -51,7 +51,7 @@ const Header = () => {
           : 'absolute top-0 left-0 right-0 bg-transparent'
       }`}
     >
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 flex items-center py-4">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 flex items-center py-3">
         <a
           href="/"
           onClick={(e) => {
@@ -65,7 +65,7 @@ const Header = () => {
           <img
             src={logoMahvla}
             alt="Mahvla Group"
-            className={`h-16 md:h-20 w-auto transition-all duration-300 group-hover:opacity-80 ${
+            className={`h-12 md:h-14 w-auto transition-all duration-300 group-hover:opacity-80 ${
               scrolled ? 'brightness-0' : ''
             }`}
           />
