@@ -14,6 +14,7 @@ import thalesLogo from "@/assets/partners/thales.jpg";
 import trendLogo from "@/assets/partners/trend.jpg";
 import veeamLogo from "@/assets/partners/veeam.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
+import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 const partners = [
   { name: "Arista", logo: aristaLogo },
@@ -36,35 +37,41 @@ const partners = [
 const PartnersCarousel = () => {
   const allPartners = [...partners, ...partners];
   const { t } = useLanguage();
+  const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="parceiros" className="py-10 md:py-14 bg-black relative overflow-hidden">
-      <div className="max-w-[1600px] mx-auto px-6 mb-8 relative z-10 text-center">
-        <p className="text-primary text-sm font-semibold tracking-[0.2em] uppercase mb-2">
+    <section id="parceiros" className="py-20 md:py-28 bg-background relative overflow-hidden">
+      <div
+        ref={ref}
+        className={`max-w-[1400px] mx-auto px-6 lg:px-12 mb-10 text-center scroll-fade-up ${isVisible ? 'visible' : ''}`}
+      >
+        <span className="badge-pill mb-6">
+          <span className="w-1.5 h-1.5 rounded-full bg-primary" />
           {t("partners.label")}
-        </p>
-        <h2 className="text-2xl md:text-3xl font-display font-bold tracking-tight text-foreground">
-          {t("partners.title")} <span className="text-primary">{t("partners.titleHighlight")}</span>{" "}
+        </span>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold tracking-tight text-foreground">
+          {t("partners.title")}{" "}
+          <span className="text-primary">{t("partners.titleHighlight")}</span>{" "}
           {t("partners.titleEnd")}
         </h2>
       </div>
-      
-      <div className="mx-4 overflow-hidden relative z-10">
-        <div 
-          className="flex animate-scroll-left-slow hover:pause-animation"
+
+      <div className="overflow-hidden">
+        <div
+          className="flex animate-scroll-left-slow"
           style={{ width: 'max-content' }}
         >
           {allPartners.map((partner, index) => (
             <div
               key={`${partner.name}-${index}`}
-              className="flex-shrink-0 px-6 md:px-8 flex items-center justify-center h-20 group"
+              className="flex-shrink-0 px-6 md:px-10 flex items-center justify-center h-20 group"
             >
               <img
                 src={partner.logo}
                 alt={partner.name}
                 loading="lazy"
                 decoding="async"
-                className="h-[60px] md:h-[70px] w-auto object-contain opacity-50 hover:opacity-100 transition-all duration-500 hover:scale-110 will-change-transform grayscale hover:grayscale-0"
+                className="h-[50px] md:h-[60px] w-auto object-contain opacity-40 hover:opacity-90 transition-all duration-500 hover:scale-110 grayscale hover:grayscale-0"
                 draggable={false}
               />
             </div>
