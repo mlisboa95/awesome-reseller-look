@@ -43,16 +43,71 @@ const HeroSection = () => {
   return (
     <section id="solucoes" className="relative flex flex-col">
       <div className="relative min-h-screen flex flex-col overflow-hidden bg-background">
-        {/* Decorative circles/lines — sep2 style */}
-        <div className="hero-lines" />
-        <div
-          className="absolute top-[10%] right-[-15%] w-[900px] h-[900px] rounded-full opacity-[0.04]"
-          style={{ border: "1px solid hsla(0, 0%, 100%, 0.08)" }}
-        />
-        <div
-          className="absolute top-[20%] right-[-5%] w-[700px] h-[700px] rounded-full opacity-[0.03]"
-          style={{ border: "1px solid hsla(0, 0%, 100%, 0.06)" }}
-        />
+        {/* Animated SVG curved lines — sep2 style */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <svg
+            className="absolute inset-0 w-full h-full"
+            viewBox="0 0 1440 900"
+            preserveAspectRatio="none"
+            fill="none"
+          >
+            {/* Gray flowing curves */}
+            <path
+              d="M800 -100 Q900 200 850 400 Q800 600 900 900"
+              stroke="hsla(0, 0%, 50%, 0.12)"
+              strokeWidth="1.5"
+              className="hero-curve hero-curve-1"
+            />
+            <path
+              d="M900 -50 Q1000 250 950 450 Q900 650 1050 950"
+              stroke="hsla(0, 0%, 50%, 0.08)"
+              strokeWidth="1"
+              className="hero-curve hero-curve-2"
+            />
+            <path
+              d="M1000 -80 Q1100 180 1080 380 Q1060 580 1200 920"
+              stroke="hsla(0, 0%, 50%, 0.1)"
+              strokeWidth="1.5"
+              className="hero-curve hero-curve-3"
+            />
+            <path
+              d="M1100 -30 Q1200 220 1150 420 Q1100 620 1300 900"
+              stroke="hsla(0, 0%, 50%, 0.06)"
+              strokeWidth="1"
+              className="hero-curve hero-curve-4"
+            />
+
+            {/* Orange accent curve */}
+            <path
+              d="M850 -60 Q950 250 920 480 Q890 710 980 950"
+              stroke="hsla(24, 100%, 50%, 0.15)"
+              strokeWidth="1.5"
+              className="hero-curve hero-curve-orange"
+            />
+
+            {/* Blue/cyan accent curve */}
+            <path
+              d="M1050 -40 Q1150 300 1120 500 Q1090 700 1250 950"
+              stroke="hsla(200, 80%, 55%, 0.12)"
+              strokeWidth="1.5"
+              className="hero-curve hero-curve-blue"
+            />
+
+            {/* Additional subtle curves for depth */}
+            <path
+              d="M750 -120 Q850 150 820 350 Q790 550 850 850"
+              stroke="hsla(0, 0%, 45%, 0.06)"
+              strokeWidth="1"
+              className="hero-curve hero-curve-5"
+            />
+            <path
+              d="M1150 0 Q1250 280 1200 500 Q1150 720 1350 950"
+              stroke="hsla(0, 0%, 45%, 0.05)"
+              strokeWidth="1"
+              className="hero-curve hero-curve-6"
+            />
+          </svg>
+        </div>
 
         {/* Subtle orange glow */}
         <div
@@ -63,15 +118,19 @@ const HeroSection = () => {
           }}
         />
 
+        {/* Frame / border effect — sep2 style */}
+        <div className="absolute inset-0 pointer-events-none z-20">
+          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/[0.08] to-transparent" />
+          <div className="absolute inset-y-0 left-0 w-px bg-gradient-to-b from-white/[0.06] via-white/[0.03] to-transparent" />
+          <div className="absolute inset-y-0 right-0 w-px bg-gradient-to-b from-white/[0.06] via-white/[0.03] to-transparent" />
+        </div>
+
         {/* Main content */}
         <div
           className="flex-1 flex items-center w-full max-w-[1400px] mx-auto px-6 lg:px-12 pt-32 pb-12 relative z-10"
           style={{ opacity: contentOpacity }}
         >
           <div className="max-w-3xl text-left">
-
-
-
             <TextReveal delay={400}>
               <h1 className="font-display text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[0.95] mb-8 tracking-tight">
                 <span className="text-foreground">{t("hero.title1")}</span>
@@ -110,10 +169,10 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Partner logo strip at bottom of hero — sep2 style */}
+        {/* Partner logo strip at bottom of hero */}
         <div className="relative z-10 bg-background/50 backdrop-blur-sm">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-6">
-            <div className="flex items-center gap-8 md:gap-12 overflow-x-auto scrollbar-hide">
+            <div className="flex items-center gap-8 md:gap-12 flex-wrap justify-start">
               {heroPartners.map((partner) =>
                 partner.logo ? (
                   <img
@@ -135,8 +194,6 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-
-        
       </div>
     </section>
   );
