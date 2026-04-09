@@ -24,9 +24,9 @@ const translations: Record<string, string> = {
 
   // About
   "about.label": "About Us",
-  "about.title": "Over two decades delivering with",
-  "about.titleHighlight": "consistency",
-  "about.description": "Mahvla Group LLC is a technology solutions provider specializing in cybersecurity, cloud infrastructure, and networking. With deep expertise in AWS cloud services, we help enterprise and public sector organizations design, deploy, and manage solutions on AWS — from infrastructure and security to tailored software procurement through AWS Marketplace, with local support and dedicated project management.",
+  "about.title": "22 years connecting technology to real",
+  "about.titleHighlight": "outcomes",
+  "about.description": "We're a Brazilian-born technology integrator with a US branch in Boca Raton, FL. We help enterprises and public sector organizations design, deploy, and operate secure IT infrastructure — from the data center to AWS cloud.",
   "about.stat1": "years of experience",
   "about.stat2": "active certifications",
   "about.stat3": "projects delivered",
