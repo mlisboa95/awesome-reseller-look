@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, ExternalLink, ArrowRight } from "lucide-react";
+import { Mail, Phone, MapPin, ExternalLink } from "lucide-react";
 import { forwardRef } from "react";
 import logoMahvla from "@/assets/logo-mahvla-footer.png";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -11,21 +11,12 @@ const Footer = forwardRef<HTMLElement, FooterProps>(({ showCta = true }, ref) =>
   const { t } = useLanguage();
 
   return (
-    <footer ref={ref} id="contato" className="bg-card relative overflow-hidden border-t border-border">
-      {/* Subtle glow */}
-      <div
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] opacity-[0.06]"
-        style={{
-          background: "radial-gradient(ellipse at center, hsl(24, 100%, 50%) 0%, transparent 60%)",
-          filter: "blur(100px)",
-        }}
-      />
-
+    <footer ref={ref} id="contato" className="bg-background relative overflow-hidden border-t border-gray-200">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Logo + tagline */}
           <div className="lg:col-span-2">
-            <img src={logoMahvla} alt="Mahvla Grupo" className="h-20 w-auto mb-6" />
+            <img src={logoMahvla} alt="Mahvla Group" className="h-20 w-auto mb-6" />
             <p className="text-muted-foreground text-sm leading-relaxed max-w-md">
               {t("about.label")} — {t("hero.eyebrow")}
             </p>
