@@ -23,7 +23,7 @@ const translations: Record<string, Record<Language, string>> = {
   "hero.title1": { pt: "Tecnologia,", en: "Technology," },
   "hero.title2": { pt: "Integração", en: "Integration" },
   "hero.title3": { pt: "e Resultados.", en: "and Results." },
-  "hero.cta1": { pt: "Conheça nossas soluções", en: "Discover our solutions" },
+  "hero.cta1": { pt: "Nossas Soluções", en: "Our Solutions" },
   "hero.cta2": { pt: "Sobre a Mahvla", en: "About Mahvla" },
 
   // About
@@ -31,8 +31,8 @@ const translations: Record<string, Record<Language, string>> = {
   "about.title": { pt: "Mais de duas décadas entregando com", en: "Over two decades delivering with" },
   "about.titleHighlight": { pt: "consistência", en: "consistency" },
   "about.description": {
-    pt: "Fundado em 2004, o Grupo Mahvla é uma integradora de tecnologia que cresceu ao lado dos seus clientes. Nosso modelo é aprofundar parcerias de longo prazo, projeto a projeto, com proximidade técnica, método e transparência em cada etapa. Atuamos na integração de soluções para organizações públicas e privadas, conectando fabricantes, plataformas e tecnologias de forma coerente e alinhada aos objetivos de cada cliente. Da arquitetura à sustentação, conduzimos o ciclo completo com uma equipe enxuta, qualificada e comprometida com excelência na entrega.",
-    en: "Founded in 2004, Grupo Mahvla is a technology integrator that has grown alongside its clients. Our model is to deepen long-term partnerships, project by project, with technical proximity, methodology, and transparency at every stage. We integrate solutions for public and private organizations, connecting manufacturers, platforms, and technologies in a coherent manner aligned with each client's objectives. From architecture to ongoing support, we manage the complete cycle with a lean, qualified team committed to excellence in delivery.",
+    pt: "Fundado em 2004, o Grupo Mahvla é uma integradora de tecnologia que cresceu ao lado dos seus clientes. Nosso modelo é aprofundar parcerias de longo prazo, projeto a projeto, com proximidade técnica, método e transparência em cada etapa.",
+    en: "Founded in 2004, Grupo Mahvla is a technology integrator that has grown alongside its clients. Our model is to deepen long-term partnerships, project by project, with technical proximity, methodology, and transparency at every stage.",
   },
   "about.stat1": { pt: "anos de experiência", en: "years of experience" },
   "about.stat2": { pt: "certificações ativas", en: "active certifications" },
@@ -45,23 +45,23 @@ const translations: Record<string, Record<Language, string>> = {
   "services.titleHighlight": { pt: "integram", en: "integrate" },
   "services.s1.title": { pt: "Redes & Conectividade", en: "Networks & Connectivity" },
   "services.s1.desc": {
-    pt: "Arquitetura, integração e operação de soluções de redes corporativas, abrangendo LAN/WLAN, WAN e MAN, SD-WAN, monitoramento de performance (NPM), operação de rede (NOC), telefonia IP e videoconferência, com foco em disponibilidade, desempenho e escalabilidade.",
-    en: "Architecture, integration and operation of corporate network solutions, covering LAN/WLAN, WAN and MAN, SD-WAN, performance monitoring (NPM), network operations (NOC), IP telephony and video conferencing, focused on availability, performance and scalability.",
+    pt: "Arquitetura, integração e operação de soluções de redes corporativas, abrangendo LAN/WLAN, WAN e MAN, SD-WAN, monitoramento de performance (NPM), operação de rede (NOC), telefonia IP e videoconferência.",
+    en: "Architecture, integration and operation of corporate network solutions, covering LAN/WLAN, WAN and MAN, SD-WAN, performance monitoring (NPM), network operations (NOC), IP telephony and video conferencing.",
   },
   "services.s2.title": { pt: "Cibersegurança", en: "Cybersecurity" },
   "services.s2.desc": {
-    pt: "Arquitetura, integração e operação de soluções de segurança, incluindo NGFW, WAF, EDR/XDR, ZTNA e SASE, gestão de identidades (IAM), acessos privilegiados (PAM), proteção de e-mail e colaboração (Microsoft 365 e Google Workspace), segurança para workloads e containers, além de proteção e backup de dados.",
-    en: "Architecture, integration and operation of security solutions, including NGFW, WAF, EDR/XDR, ZTNA and SASE, identity management (IAM), privileged access (PAM), email and collaboration protection (Microsoft 365 and Google Workspace), workload and container security, as well as data protection and backup.",
+    pt: "Arquitetura, integração e operação de soluções de segurança, incluindo NGFW, WAF, EDR/XDR, ZTNA e SASE, gestão de identidades (IAM), acessos privilegiados (PAM), proteção de e-mail e colaboração.",
+    en: "Architecture, integration and operation of security solutions, including NGFW, WAF, EDR/XDR, ZTNA and SASE, identity management (IAM), privileged access (PAM), email and collaboration protection.",
   },
   "services.s3.title": { pt: "Infraestrutura & Cloud", en: "Infrastructure & Cloud" },
   "services.s3.desc": {
-    pt: "Arquitetura, integração e operação de ambientes on-premises, híbridos e em nuvem, incluindo infraestrutura hiperconvergente (HCI), storage, servidores, virtualização, containers (Kubernetes) e object storage, com foco em desempenho, resiliência e evolução do ambiente.",
-    en: "Architecture, integration and operation of on-premises, hybrid and cloud environments, including hyperconverged infrastructure (HCI), storage, servers, virtualization, containers (Kubernetes) and object storage, focused on performance, resilience and environment evolution.",
+    pt: "Arquitetura, integração e operação de ambientes on-premises, híbridos e em nuvem, incluindo infraestrutura hiperconvergente (HCI), storage, servidores, virtualização e containers.",
+    en: "Architecture, integration and operation of on-premises, hybrid and cloud environments, including hyperconverged infrastructure (HCI), storage, servers, virtualization and containers.",
   },
   "services.s4.title": { pt: "Segurança Eletrônica & Cidades Inteligentes", en: "Electronic Security & Smart Cities" },
   "services.s4.desc": {
-    pt: "Arquitetura, integração e operação de soluções de segurança eletrônica, incluindo CFTV, controle de acesso, leitura de placas (LPR), reconhecimento facial e soluções para cidades inteligentes, integradas a redes, data centers e sistemas corporativos.",
-    en: "Architecture, integration and operation of electronic security solutions, including CCTV, access control, license plate reading (LPR), facial recognition and smart city solutions, integrated with networks, data centers and corporate systems.",
+    pt: "Arquitetura, integração e operação de soluções de segurança eletrônica, incluindo CFTV, controle de acesso, leitura de placas (LPR), reconhecimento facial e soluções para cidades inteligentes.",
+    en: "Architecture, integration and operation of electronic security solutions, including CCTV, access control, license plate reading (LPR), facial recognition and smart city solutions.",
   },
   "services.s5.title": { pt: "Suporte Especializado", en: "Specialized Support" },
   "services.s5.desc": {
@@ -74,6 +74,31 @@ const translations: Record<string, Record<Language, string>> = {
     en: "Diagnosis, architecture and strategic technology integration focused on proven ROI.",
   },
 
+  // Why Us
+  "whyus.label": { pt: "Por que a Mahvla", en: "Why Choose Us" },
+  "whyus.title": { pt: "Por que nos", en: "Why" },
+  "whyus.titleHighlight": { pt: "escolher?", en: "choose us?" },
+  "whyus.r1.title": { pt: "Segurança & Confiança", en: "Security & Trust" },
+  "whyus.r1.desc": {
+    pt: "Programa robusto de compliance e certificações que garantem integridade em todas as operações.",
+    en: "Robust compliance program and certifications ensuring integrity in all operations.",
+  },
+  "whyus.r2.title": { pt: "Expertise Técnica", en: "Technical Expertise" },
+  "whyus.r2.desc": {
+    pt: "Equipe com mais de 50 certificações ativas dos maiores fabricantes globais de tecnologia.",
+    en: "Team with over 50 active certifications from the world's largest technology manufacturers.",
+  },
+  "whyus.r3.title": { pt: "Parceria de Longo Prazo", en: "Long-Term Partnership" },
+  "whyus.r3.desc": {
+    pt: "Modelo de relacionamento que prioriza proximidade técnica, método e transparência.",
+    en: "Relationship model that prioritizes technical proximity, methodology, and transparency.",
+  },
+  "whyus.r4.title": { pt: "Entrega Completa", en: "Complete Delivery" },
+  "whyus.r4.desc": {
+    pt: "Da arquitetura à sustentação, conduzimos o ciclo completo com excelência na entrega.",
+    en: "From architecture to ongoing support, we manage the complete cycle with delivery excellence.",
+  },
+
   // Partners
   "partners.label": { pt: "15+ Parceiros Globais", en: "15+ Global Partners" },
   "partners.title": { pt: "Fabricantes", en: "Leading global" },
@@ -81,6 +106,7 @@ const translations: Record<string, Record<Language, string>> = {
   "partners.titleEnd": { pt: "globais", en: "" },
 
   // Contact CTA
+  "cta.badge": { pt: "Fale Conosco", en: "Let's Talk" },
   "cta.title": { pt: "Vamos falar sobre o seu", en: "Let's talk about your" },
   "cta.titleHighlight": { pt: "projeto?", en: "project?" },
   "cta.description": {

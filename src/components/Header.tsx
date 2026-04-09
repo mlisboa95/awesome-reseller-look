@@ -2,7 +2,6 @@ import { Menu, X, ExternalLink } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import logoMahvla from "@/assets/logo-mahvla-footer.png";
-import MagneticButton from "./MagneticButton";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Header = () => {
@@ -21,9 +20,7 @@ const Header = () => {
   ];
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -34,17 +31,12 @@ const Header = () => {
       const headerOffset = 100;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-      
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
     }
   };
 
   const handleSectionClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
-    
     if (location.pathname !== "/") {
       navigate("/" + href);
     } else {
@@ -54,29 +46,17 @@ const Header = () => {
   };
 
   return (
-    <header 
+    <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled 
-          ? 'bg-background/80 backdrop-blur-xl border-b border-border/50 shadow-lg shadow-black/5' 
+        scrolled
+          ? 'bg-background/90 backdrop-blur-xl border-b border-border/50'
           : 'bg-transparent'
       }`}
     >
-      {/* Top bar */}
-      <div className={`border-b border-white/10 transition-all duration-300 ${scrolled ? 'hidden' : 'block'}`}>
-        <div className="container mx-auto px-6 py-2 flex items-center justify-end gap-6 text-xs text-muted-foreground">
-          <a href="mailto:contato@mahvla.com.br" className="hover:text-primary transition-colors">
-            contato@mahvla.com.br
-          </a>
-          <span>|</span>
-          <a href="tel:+556121914900" className="hover:text-primary transition-colors">
-            +55 (61) 2191-4900
-          </a>
-        </div>
-      </div>
-      
-      <div className="container mx-auto px-6 flex items-center py-4">
-        <a 
-          href="/" 
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 flex items-center py-4">
+        {/* Logo */}
+        <a
+          href="/"
           onClick={(e) => {
             if (location.pathname === "/") {
               e.preventDefault();
@@ -85,20 +65,21 @@ const Header = () => {
           }}
           className="flex items-center gap-3 group"
         >
-          <img 
-            src={logoMahvla} 
-            alt="Mahvla Grupo" 
-            className="h-20 md:h-24 w-auto transition-all duration-300 group-hover:opacity-80"
+          <img
+            src={logoMahvla}
+            alt="Mahvla Grupo"
+            className="h-16 md:h-20 w-auto transition-all duration-300 group-hover:opacity-80"
           />
         </a>
 
-        <nav className="hidden md:flex items-center gap-8 ml-auto mr-8">
+        {/* Desktop nav */}
+        <nav className="hidden lg:flex items-center gap-8 ml-auto mr-8">
           {navLinks.map((link) => (
-            <MagneticButton key={link.label} strength={0.2}>
+            <div key={link.label}>
               {link.isExternal ? (
                 <Link
                   to={link.href}
-                  className="text-sm font-medium transition-all duration-300 text-muted-foreground hover:text-foreground relative group"
+                  className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 relative group"
                 >
                   {link.label}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
@@ -107,47 +88,47 @@ const Header = () => {
                 <a
                   href={link.href}
                   onClick={(e) => handleSectionClick(e, link.href)}
-                  className="text-sm font-medium transition-all duration-300 cursor-pointer text-muted-foreground hover:text-foreground relative group"
+                  className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 cursor-pointer relative group"
                 >
                   {link.label}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
                 </a>
               )}
-            </MagneticButton>
+            </div>
           ))}
         </nav>
-        
-        <div className="hidden md:flex items-center gap-4">
-          {/* Language Toggle */}
+
+        {/* Right side actions */}
+        <div className="hidden lg:flex items-center gap-3">
           <button
             onClick={() => setLanguage(language === "pt" ? "en" : "pt")}
-            className="px-4 py-2 text-xs font-bold tracking-wider rounded-xl bg-primary/15 text-primary border border-primary/30 hover:bg-primary hover:text-primary-foreground transition-all duration-300 uppercase"
+            className="px-3 py-1.5 text-xs font-bold tracking-wider rounded-full border border-border text-muted-foreground hover:text-foreground hover:border-primary/40 transition-all duration-300 uppercase"
           >
             {language === "pt" ? "EN" : "PT"}
           </button>
 
-          <MagneticButton>
-            <a
-              href="https://suporte.mahvla.com.br"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:scale-105"
-            >
-              {t("nav.portal")}
-              <ExternalLink className="w-4 h-4" />
-            </a>
-          </MagneticButton>
+          <a
+            href="https://suporte.mahvla.com.br"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300"
+          >
+            {t("nav.portal")}
+            <span className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center">
+              <ExternalLink className="w-3 h-3" />
+            </span>
+          </a>
         </div>
 
         {/* Mobile menu button */}
-        <div className="md:hidden flex items-center gap-3 ml-auto">
+        <div className="lg:hidden flex items-center gap-3 ml-auto">
           <button
             onClick={() => setLanguage(language === "pt" ? "en" : "pt")}
-            className="px-4 py-2 text-xs font-bold tracking-wider rounded-xl bg-primary/15 text-primary border border-primary/30 hover:bg-primary hover:text-primary-foreground transition-all duration-300 uppercase"
+            className="px-3 py-1.5 text-xs font-bold tracking-wider rounded-full border border-border text-muted-foreground uppercase"
           >
             {language === "pt" ? "EN" : "PT"}
           </button>
-          <button 
+          <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="p-2 text-muted-foreground hover:text-foreground transition-colors"
           >
@@ -157,15 +138,15 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div 
+      <div
         className={`
-          md:hidden absolute top-full left-0 right-0 
+          lg:hidden absolute top-full left-0 right-0
           bg-background/95 backdrop-blur-xl border-b border-border
           transition-all duration-300 overflow-hidden
           ${mobileMenuOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'}
         `}
       >
-        <nav className="container mx-auto px-6 py-6 flex flex-col gap-4">
+        <nav className="max-w-[1400px] mx-auto px-6 py-6 flex flex-col gap-4">
           {navLinks.map((link) => (
             link.isExternal ? (
               <Link
@@ -191,7 +172,7 @@ const Header = () => {
             href="https://suporte.mahvla.com.br"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold rounded-xl bg-primary text-primary-foreground mt-4"
+            className="inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold rounded-full bg-primary text-primary-foreground mt-4"
           >
             {t("nav.portal")}
             <ExternalLink className="w-4 h-4" />

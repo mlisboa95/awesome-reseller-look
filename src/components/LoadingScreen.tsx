@@ -15,20 +15,20 @@ const LoadingScreen = () => {
 
   return (
     <div
-      className={`fixed inset-0 z-[9999] flex items-center justify-center bg-[#0a0a0a] transition-all duration-500 ${
+      className={`fixed inset-0 z-[9999] flex items-center justify-center bg-background transition-all duration-500 ${
         fadeOut ? "opacity-0" : "opacity-100"
       }`}
     >
-      <div 
-        className="absolute w-[400px] h-[400px] rounded-full opacity-20"
+      <div
+        className="absolute w-[400px] h-[400px] rounded-full opacity-[0.08]"
         style={{
-          background: "radial-gradient(circle, hsl(16, 85%, 55%) 0%, transparent 60%)",
+          background: "radial-gradient(circle, hsl(24, 100%, 50%) 0%, transparent 60%)",
           filter: "blur(80px)",
         }}
       />
       <div className="relative flex flex-col items-center gap-8">
         <img src={logoMahvla} alt="Mahvla" className="h-14 object-contain animate-pulse" />
-        <div className="w-32 h-1 bg-white/10 rounded-full overflow-hidden">
+        <div className="w-32 h-1 bg-border rounded-full overflow-hidden">
           <div className="h-full bg-primary rounded-full animate-[loading_1.2s_ease-out_forwards]" />
         </div>
       </div>
