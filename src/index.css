@@ -277,34 +277,68 @@
   animation-play-state: paused;
 }
 
-/* Decorative line pattern for hero bg */
-.hero-lines {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
+/* Animated hero curves — sep2 style */
+.hero-curve {
+  fill: none;
+  stroke-linecap: round;
 }
 
-.hero-lines::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  right: -20%;
-  width: 800px;
-  height: 800px;
-  border: 1px solid hsla(0, 0%, 100%, 0.06);
-  border-radius: 50%;
+.hero-curve-1 {
+  animation: curve-drift-1 20s ease-in-out infinite;
+}
+.hero-curve-2 {
+  animation: curve-drift-2 25s ease-in-out infinite;
+}
+.hero-curve-3 {
+  animation: curve-drift-3 22s ease-in-out infinite;
+}
+.hero-curve-4 {
+  animation: curve-drift-1 28s ease-in-out infinite reverse;
+}
+.hero-curve-5 {
+  animation: curve-drift-2 30s ease-in-out infinite;
+}
+.hero-curve-6 {
+  animation: curve-drift-3 26s ease-in-out infinite reverse;
+}
+.hero-curve-orange {
+  animation: curve-drift-orange 18s ease-in-out infinite;
+}
+.hero-curve-blue {
+  animation: curve-drift-blue 22s ease-in-out infinite;
 }
 
-.hero-lines::after {
-  content: '';
-  position: absolute;
-  top: -30%;
-  right: -10%;
-  width: 600px;
-  height: 600px;
-  border: 1px solid hsla(0, 0%, 100%, 0.04);
-  border-radius: 50%;
+@keyframes curve-drift-1 {
+  0%, 100% { transform: translateX(0) translateY(0); }
+  25% { transform: translateX(15px) translateY(-10px); }
+  50% { transform: translateX(-10px) translateY(15px); }
+  75% { transform: translateX(8px) translateY(-5px); }
+}
+
+@keyframes curve-drift-2 {
+  0%, 100% { transform: translateX(0) translateY(0); }
+  33% { transform: translateX(-12px) translateY(8px); }
+  66% { transform: translateX(10px) translateY(-12px); }
+}
+
+@keyframes curve-drift-3 {
+  0%, 100% { transform: translateX(0) translateY(0); }
+  20% { transform: translateX(8px) translateY(12px); }
+  40% { transform: translateX(-15px) translateY(-5px); }
+  60% { transform: translateX(5px) translateY(10px); }
+  80% { transform: translateX(-8px) translateY(-8px); }
+}
+
+@keyframes curve-drift-orange {
+  0%, 100% { transform: translateX(0) translateY(0); opacity: 0.15; }
+  30% { transform: translateX(12px) translateY(-8px); opacity: 0.2; }
+  60% { transform: translateX(-8px) translateY(10px); opacity: 0.1; }
+}
+
+@keyframes curve-drift-blue {
+  0%, 100% { transform: translateX(0) translateY(0); opacity: 0.12; }
+  40% { transform: translateX(-10px) translateY(12px); opacity: 0.18; }
+  70% { transform: translateX(8px) translateY(-6px); opacity: 0.08; }
 }
 
 /* Glow animations */
