@@ -277,68 +277,70 @@
   animation-play-state: paused;
 }
 
-/* Animated hero curves — sep2 style */
-.hero-curve {
+/* Animated hero curves — closer to sep2 */
+.hero-track,
+.hero-accent {
   fill: none;
   stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
-.hero-curve-1 {
-  animation: curve-drift-1 20s ease-in-out infinite;
-}
-.hero-curve-2 {
-  animation: curve-drift-2 25s ease-in-out infinite;
-}
-.hero-curve-3 {
-  animation: curve-drift-3 22s ease-in-out infinite;
-}
-.hero-curve-4 {
-  animation: curve-drift-1 28s ease-in-out infinite reverse;
-}
-.hero-curve-5 {
-  animation: curve-drift-2 30s ease-in-out infinite;
-}
-.hero-curve-6 {
-  animation: curve-drift-3 26s ease-in-out infinite reverse;
-}
-.hero-curve-orange {
-  animation: curve-drift-orange 18s ease-in-out infinite;
-}
-.hero-curve-blue {
-  animation: curve-drift-blue 22s ease-in-out infinite;
+.hero-track {
+  stroke: hsla(0, 0%, 72%, 0.28);
+  stroke-width: 1.8;
 }
 
-@keyframes curve-drift-1 {
-  0%, 100% { transform: translateX(0) translateY(0); }
-  25% { transform: translateX(15px) translateY(-10px); }
-  50% { transform: translateX(-10px) translateY(15px); }
-  75% { transform: translateX(8px) translateY(-5px); }
+.hero-track-light {
+  stroke: hsla(0, 0%, 76%, 0.2);
 }
 
-@keyframes curve-drift-2 {
-  0%, 100% { transform: translateX(0) translateY(0); }
-  33% { transform: translateX(-12px) translateY(8px); }
-  66% { transform: translateX(10px) translateY(-12px); }
+.hero-accent {
+  stroke-width: 2.2;
+  stroke-dasharray: 110 1200;
 }
 
-@keyframes curve-drift-3 {
-  0%, 100% { transform: translateX(0) translateY(0); }
-  20% { transform: translateX(8px) translateY(12px); }
-  40% { transform: translateX(-15px) translateY(-5px); }
-  60% { transform: translateX(5px) translateY(10px); }
-  80% { transform: translateX(-8px) translateY(-8px); }
+.hero-accent-orange {
+  stroke: hsla(24, 100%, 52%, 0.95);
 }
 
-@keyframes curve-drift-orange {
-  0%, 100% { transform: translateX(0) translateY(0); opacity: 0.15; }
-  30% { transform: translateX(12px) translateY(-8px); opacity: 0.2; }
-  60% { transform: translateX(-8px) translateY(10px); opacity: 0.1; }
+.hero-accent-blue {
+  stroke: hsla(203, 92%, 55%, 0.9);
 }
 
-@keyframes curve-drift-blue {
-  0%, 100% { transform: translateX(0) translateY(0); opacity: 0.12; }
-  40% { transform: translateX(-10px) translateY(12px); opacity: 0.18; }
-  70% { transform: translateX(8px) translateY(-6px); opacity: 0.08; }
+.hero-dash-1 {
+  animation: hero-dash-flow-1 12s linear infinite;
+}
+
+.hero-dash-2 {
+  animation: hero-dash-flow-2 16s linear infinite;
+}
+
+.hero-dash-3 {
+  animation: hero-dash-flow-3 14s linear infinite;
+}
+
+.hero-dash-4 {
+  animation: hero-dash-flow-4 18s linear infinite;
+}
+
+@keyframes hero-dash-flow-1 {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -1310; }
+}
+
+@keyframes hero-dash-flow-2 {
+  from { stroke-dashoffset: -250; }
+  to { stroke-dashoffset: -1560; }
+}
+
+@keyframes hero-dash-flow-3 {
+  from { stroke-dashoffset: -520; }
+  to { stroke-dashoffset: -1830; }
+}
+
+@keyframes hero-dash-flow-4 {
+  from { stroke-dashoffset: -780; }
+  to { stroke-dashoffset: -2090; }
 }
 
 /* Glow animations */

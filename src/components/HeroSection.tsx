@@ -47,7 +47,7 @@ const HeroSection = () => {
         {/* Frame border with rounded corners — sep2 style */}
         <div className="absolute inset-3 md:inset-4 rounded-2xl border border-white/[0.12] pointer-events-none z-20" />
 
-        {/* Animated SVG curved lines — sep2 style */}
+        {/* Animated SVG curved lines — closer to sep2 */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <svg
             className="absolute inset-0 w-full h-full"
@@ -55,67 +55,26 @@ const HeroSection = () => {
             preserveAspectRatio="none"
             fill="none"
           >
-            {/* Main gray flowing curves — thick and visible like sep2 */}
-            <path
-              d="M700 -100 C750 150, 680 350, 720 500 C760 650, 850 750, 900 950"
-              stroke="hsla(0, 0%, 45%, 0.25)"
-              strokeWidth="2"
-              className="hero-curve hero-curve-1"
-            />
-            <path
-              d="M820 -80 C870 180, 800 320, 830 500 C860 680, 950 800, 1000 950"
-              stroke="hsla(0, 0%, 45%, 0.2)"
-              strokeWidth="2"
-              className="hero-curve hero-curve-2"
-            />
-            <path
-              d="M950 -60 C1000 200, 930 380, 970 520 C1010 660, 1100 780, 1150 950"
-              stroke="hsla(0, 0%, 45%, 0.22)"
-              strokeWidth="2"
-              className="hero-curve hero-curve-3"
-            />
-            <path
-              d="M1080 -40 C1130 180, 1060 350, 1100 500 C1140 650, 1220 780, 1280 950"
-              stroke="hsla(0, 0%, 45%, 0.18)"
-              strokeWidth="2"
-              className="hero-curve hero-curve-4"
-            />
-            <path
-              d="M1200 -20 C1250 220, 1180 400, 1220 550 C1260 700, 1340 800, 1400 950"
-              stroke="hsla(0, 0%, 45%, 0.15)"
-              strokeWidth="1.5"
-              className="hero-curve hero-curve-5"
-            />
+            <defs>
+              <path id="hero-path-1" d="M 860 -40 C 930 110, 980 220, 1020 330 S 1110 560, 1220 640 C 1310 700, 1390 700, 1480 700" />
+              <path id="hero-path-2" d="M 760 -80 C 840 90, 900 220, 940 360 S 1020 600, 1140 700 C 1240 780, 1360 780, 1480 780" />
+              <path id="hero-path-3" d="M 650 -120 C 740 80, 800 220, 840 380 S 920 650, 1040 780 C 1140 890, 1280 910, 1480 910" />
+              <path id="hero-path-4" d="M 980 -30 C 1060 120, 1120 240, 1160 340 S 1230 500, 1320 560 C 1390 610, 1450 610, 1520 610" />
+            </defs>
 
-            {/* Orange accent curve — prominent */}
-            <path
-              d="M780 -70 C830 200, 750 380, 800 530 C850 680, 920 800, 960 950"
-              stroke="hsla(24, 100%, 50%, 0.3)"
-              strokeWidth="2"
-              className="hero-curve hero-curve-orange"
-            />
+            {/* Base gray tracks */}
+            <use href="#hero-path-1" className="hero-track" />
+            <use href="#hero-path-2" className="hero-track" />
+            <use href="#hero-path-3" className="hero-track" />
+            <use href="#hero-path-4" className="hero-track hero-track-light" />
 
-            {/* Blue/cyan accent curve */}
-            <path
-              d="M1120 -30 C1170 250, 1100 420, 1150 580 C1200 740, 1300 840, 1380 950"
-              stroke="hsla(200, 80%, 55%, 0.2)"
-              strokeWidth="1.5"
-              className="hero-curve hero-curve-blue"
-            />
+            {/* Moving orange segments */}
+            <use href="#hero-path-2" className="hero-accent hero-accent-orange hero-dash-1" />
+            <use href="#hero-path-4" className="hero-accent hero-accent-orange hero-dash-2" />
 
-            {/* Extra subtle background curves for depth */}
-            <path
-              d="M600 -140 C650 100, 580 300, 620 460 C660 620, 740 740, 800 950"
-              stroke="hsla(0, 0%, 42%, 0.12)"
-              strokeWidth="1.5"
-              className="hero-curve hero-curve-6"
-            />
-            <path
-              d="M1300 0 C1350 250, 1280 420, 1320 580 C1360 740, 1420 840, 1440 950"
-              stroke="hsla(0, 0%, 42%, 0.1)"
-              strokeWidth="1.5"
-              className="hero-curve hero-curve-1"
-            />
+            {/* Moving blue segments */}
+            <use href="#hero-path-1" className="hero-accent hero-accent-blue hero-dash-3" />
+            <use href="#hero-path-3" className="hero-accent hero-accent-blue hero-dash-4" />
           </svg>
         </div>
 
