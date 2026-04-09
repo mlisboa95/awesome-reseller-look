@@ -17,6 +17,7 @@ import thalesLogo from "@/assets/partners/thales.jpg";
 import trendLogo from "@/assets/partners/trend.jpg";
 
 const heroPartners = [
+  { name: "AWS", logo: null },
   { name: "F5", logo: f5Logo },
   { name: "Check Point", logo: checkpointLogo },
   { name: "Arista", logo: aristaLogo },
@@ -80,8 +81,6 @@ const HeroSection = () => {
                 <span className="text-foreground">{t("hero.title1")}</span>
                 <br />
                 <span className="text-primary hero-glow">{t("hero.title2")}</span>
-                <br />
-                <span className="text-foreground">{t("hero.title3")}</span>
               </h1>
             </TextReveal>
 
@@ -119,15 +118,24 @@ const HeroSection = () => {
         <div className="relative z-10 border-t border-border/50 bg-background/50 backdrop-blur-sm">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-6">
             <div className="flex items-center gap-8 md:gap-12 overflow-x-auto scrollbar-hide">
-              {heroPartners.map((partner) => (
-                <img
-                  key={partner.name}
-                  src={partner.logo}
-                  alt={partner.name}
-                  className="h-8 md:h-10 w-auto object-contain opacity-40 hover:opacity-80 transition-opacity duration-300 flex-shrink-0 grayscale"
-                  draggable={false}
-                />
-              ))}
+              {heroPartners.map((partner) =>
+                partner.logo ? (
+                  <img
+                    key={partner.name}
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="h-8 md:h-10 w-auto object-contain opacity-40 hover:opacity-80 transition-opacity duration-300 flex-shrink-0 grayscale"
+                    draggable={false}
+                  />
+                ) : (
+                  <span
+                    key={partner.name}
+                    className="flex-shrink-0 text-lg md:text-xl font-bold text-foreground/40 hover:text-foreground/80 transition-opacity duration-300 tracking-wide"
+                  >
+                    ☁️ {partner.name}
+                  </span>
+                )
+              )}
             </div>
           </div>
         </div>

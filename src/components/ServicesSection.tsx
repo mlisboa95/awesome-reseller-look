@@ -29,7 +29,7 @@ const ServicesSection = () => {
     {
       icon: Camera,
       title: t("services.s4.title"),
-      tags: "CFTV • Acesso • LPR • Smart City",
+      tags: "CCTV • Access Control • LPR • Smart City",
       description: t("services.s4.desc"),
     },
   ];

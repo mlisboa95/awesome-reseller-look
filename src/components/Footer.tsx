@@ -64,13 +64,13 @@ const Footer = forwardRef<HTMLElement, FooterProps>(({ showCta = true }, ref) =>
               {t("footer.contact")}
             </h4>
             <div className="space-y-4">
-              <a href="mailto:contato@mahvla.com.br" className="flex items-center gap-3 text-muted-foreground text-sm hover:text-primary transition-colors">
+              <a href="mailto:contact@mahvla.com" className="flex items-center gap-3 text-muted-foreground text-sm hover:text-primary transition-colors">
                 <Mail className="w-4 h-4" />
-                contato@mahvla.com.br
+                contact@mahvla.com
               </a>
-              <a href="mailto:suporte@mahvla.com.br" className="flex items-center gap-3 text-muted-foreground text-sm hover:text-primary transition-colors">
+              <a href="mailto:support@mahvla.com" className="flex items-center gap-3 text-muted-foreground text-sm hover:text-primary transition-colors">
                 <Mail className="w-4 h-4" />
-                suporte@mahvla.com.br
+                support@mahvla.com
               </a>
               <a href="tel:+556121914900" className="flex items-center gap-3 text-muted-foreground text-sm hover:text-primary transition-colors">
                 <Phone className="w-4 h-4" />
@@ -92,12 +92,12 @@ const Footer = forwardRef<HTMLElement, FooterProps>(({ showCta = true }, ref) =>
               {t("footer.privacy")}
             </a>
             <a
-              href="https://portal.office.com"
+              href="https://mahvla.com.br"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-muted-foreground/60 text-sm hover:text-primary transition-colors underline underline-offset-4"
             >
-              Mahvla Corp
+              Mahvla Brazil
               <ExternalLink className="w-3 h-3" />
             </a>
           </div>

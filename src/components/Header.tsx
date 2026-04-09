@@ -1,4 +1,4 @@
-import { Menu, X, ExternalLink } from "lucide-react";
+import { Menu, X, Mail } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import logoMahvla from "@/assets/logo-mahvla-footer.png";
@@ -99,14 +99,12 @@ const Header = () => {
         {/* CTA button */}
         <div className="hidden lg:flex items-center">
           <a
-            href="https://suporte.mahvla.com.br"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:contact@mahvla.com"
             className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300"
           >
             {t("nav.portal")}
             <span className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center">
-              <ExternalLink className="w-3 h-3" />
+              <Mail className="w-3 h-3" />
             </span>
           </a>
         </div>
@@ -152,13 +150,11 @@ const Header = () => {
             )
           ))}
           <a
-            href="https://suporte.mahvla.com.br"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:contact@mahvla.com"
             className="inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold rounded-full bg-primary text-primary-foreground mt-4"
           >
             {t("nav.portal")}
-            <ExternalLink className="w-4 h-4" />
+            <Mail className="w-4 h-4" />
           </a>
         </nav>
       </div>
