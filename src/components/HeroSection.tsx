@@ -115,7 +115,7 @@ const HeroSection = () => {
         </div>
 
         {/* Partner logo strip at bottom of hero — sep2 style */}
-        <div className="relative z-10 border-t border-border/50 bg-background/50 backdrop-blur-sm">
+        <div className="relative z-10 bg-background/50 backdrop-blur-sm">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-6">
             <div className="flex items-center gap-8 md:gap-12 overflow-x-auto scrollbar-hide">
               {heroPartners.map((partner) =>
