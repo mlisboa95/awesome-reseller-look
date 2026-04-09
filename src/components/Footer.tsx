@@ -88,7 +88,7 @@ const Footer = forwardRef<HTMLElement, FooterProps>(({ showCta = true }, ref) =>
             © {new Date().getFullYear()} Mahvla Group LLC — {t("footer.copyright")}
           </p>
           <div className="flex items-center gap-6">
-            <a href="/privacidade" className="text-muted-foreground/60 text-sm hover:text-primary transition-colors underline underline-offset-4">
+            <a href="/privacy" className="text-muted-foreground/60 text-sm hover:text-primary transition-colors underline underline-offset-4">
               {t("footer.privacy")}
             </a>
             <a
