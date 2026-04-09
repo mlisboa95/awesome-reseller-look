@@ -20,16 +20,16 @@ import veeamLogo from "@/assets/partners/veeam.svg";
 
 // Alphabetical order, with individual height tuning for visual balance
 const heroPartners = [
-  { name: "AWS", logo: awsLogo, h: "h-6 md:h-7" },
-  { name: "Check Point", logo: checkpointLogo, h: "h-5 md:h-6" },
-  { name: "Everpure", logo: everpureLogo, h: "h-5 md:h-6" },
-  { name: "ExaGrid", logo: exagridLogo, h: "h-5 md:h-6" },
-  { name: "Extreme Networks", logo: extremeLogo, h: "h-5 md:h-6" },
-  { name: "Gigamon", logo: gigamonLogo, h: "h-5 md:h-6" },
-  { name: "HPE", logo: hpeLogo, h: "h-5 md:h-6" },
-  { name: "Nutanix", logo: nutanixLogo, h: "h-5 md:h-6" },
-  { name: "Riverbed", logo: riverbedLogo, h: "h-12 md:h-14" },
-  { name: "Veeam", logo: veeamLogo, h: "h-12 md:h-14" },
+  { name: "AWS", logo: awsLogo, h: "h-12 md:h-14" },
+  { name: "Check Point", logo: checkpointLogo, h: "h-10 md:h-12" },
+  { name: "Everpure", logo: everpureLogo, h: "h-10 md:h-12" },
+  { name: "ExaGrid", logo: exagridLogo, h: "h-10 md:h-12" },
+  { name: "Extreme Networks", logo: extremeLogo, h: "h-10 md:h-12" },
+  { name: "Gigamon", logo: gigamonLogo, h: "h-10 md:h-12" },
+  { name: "HPE", logo: hpeLogo, h: "h-10 md:h-12" },
+  { name: "Nutanix", logo: nutanixLogo, h: "h-10 md:h-12" },
+  { name: "Riverbed", logo: riverbedLogo, h: "h-20 md:h-24" },
+  { name: "Veeam", logo: veeamLogo, h: "h-20 md:h-24" },
 ];
 
 const HeroSection = () => {
