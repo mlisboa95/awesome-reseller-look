@@ -48,10 +48,12 @@ const Header = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
           ? 'bg-white shadow-sm border-b border-gray-200/60'
-          : 'bg-transparent'
+          : 'bg-transparent pt-3 md:pt-5'
       }`}
     >
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 flex items-center py-4">
+      <div className={`max-w-[1400px] mx-auto flex items-center py-4 ${
+        scrolled ? 'px-6 lg:px-12' : 'px-9 md:px-11 lg:px-17'
+      }`}>
         <a
           href="/"
           onClick={(e) => {
