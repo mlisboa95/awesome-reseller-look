@@ -45,15 +45,13 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-white shadow-sm border-b border-gray-200/60'
-          : 'bg-transparent pt-3 md:pt-5'
+          ? 'fixed top-0 left-0 right-0 bg-white shadow-sm border-b border-gray-200/60'
+          : 'absolute top-0 left-0 right-0 bg-transparent'
       }`}
     >
-      <div className={`max-w-[1400px] mx-auto flex items-center py-4 ${
-        scrolled ? 'px-6 lg:px-12' : 'px-9 md:px-11 lg:px-17'
-      }`}>
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 flex items-center py-4">
         <a
           href="/"
           onClick={(e) => {
