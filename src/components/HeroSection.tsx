@@ -69,12 +69,8 @@ const HeroSection = () => {
           style={{ opacity: contentOpacity }}
         >
           <div className="max-w-3xl text-left">
-            <TextReveal delay={200}>
-              <span className="badge-pill mb-8">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                {t("hero.eyebrow")}
-              </span>
-            </TextReveal>
+
+
 
             <TextReveal delay={400}>
               <h1 className="font-display text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[0.95] mb-8 tracking-tight">
