@@ -29,9 +29,9 @@ const Index = () => {
   return (
     <>
       <LoadingScreen />
-      <div className="min-h-screen bg-white relative">
+      <div className="min-h-screen bg-white relative pt-3 md:pt-5">
         {/* Dark hero frame — sep2 style with white border all around */}
-        <div className="mx-3 md:mx-5 mt-3 md:mt-5 rounded-[1.25rem] bg-background overflow-hidden relative">
+        <div className="mx-3 md:mx-5 rounded-[1.25rem] bg-background overflow-hidden relative">
           <Header />
 
           {/* Animated SVG lines — contained within the hero frame */}
