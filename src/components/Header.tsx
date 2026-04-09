@@ -9,7 +9,7 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-  const { language, setLanguage, t } = useLanguage();
+  const { t } = useLanguage();
 
   const navLinks = [
     { label: t("nav.about"), href: "#sobre", isExternal: false },
@@ -54,7 +54,6 @@ const Header = () => {
       }`}
     >
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 flex items-center py-4">
-        {/* Logo */}
         <a
           href="/"
           onClick={(e) => {
@@ -98,15 +97,8 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* Right side actions */}
-        <div className="hidden lg:flex items-center gap-3">
-          <button
-            onClick={() => setLanguage(language === "pt" ? "en" : "pt")}
-            className="px-3 py-1.5 text-xs font-bold tracking-wider rounded-full border border-border text-muted-foreground hover:text-foreground hover:border-primary/40 transition-all duration-300 uppercase"
-          >
-            {language === "pt" ? "EN" : "PT"}
-          </button>
-
+        {/* CTA button */}
+        <div className="hidden lg:flex items-center">
           <a
             href="https://suporte.mahvla.com.br"
             target="_blank"
@@ -121,20 +113,12 @@ const Header = () => {
         </div>
 
         {/* Mobile menu button */}
-        <div className="lg:hidden flex items-center gap-3 ml-auto">
-          <button
-            onClick={() => setLanguage(language === "pt" ? "en" : "pt")}
-            className="px-3 py-1.5 text-xs font-bold tracking-wider rounded-full border border-border text-muted-foreground uppercase"
-          >
-            {language === "pt" ? "EN" : "PT"}
-          </button>
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 text-muted-foreground hover:text-foreground transition-colors"
-          >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="lg:hidden ml-auto p-2 text-muted-foreground hover:text-foreground transition-colors"
+        >
+          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
       </div>
 
       {/* Mobile Menu */}
