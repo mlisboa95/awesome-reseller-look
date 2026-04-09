@@ -9,7 +9,6 @@ import PartnersCarousel from "@/components/PartnersCarousel";
 import ContactCta from "@/components/ContactCta";
 import Footer from "@/components/Footer";
 import LoadingScreen from "@/components/LoadingScreen";
-import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   const location = useLocation();
@@ -42,7 +41,6 @@ const Index = () => {
           <ContactCta />
         </main>
         <Footer />
-        <WhatsAppButton />
       </div>
     </>
   );
