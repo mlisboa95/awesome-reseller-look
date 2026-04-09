@@ -15,7 +15,7 @@ const LoadingScreen = () => {
 
   return (
     <div
-      className={`fixed inset-0 z-[9999] flex items-center justify-center bg-background transition-all duration-500 ${
+      className={`fixed inset-0 z-[9999] flex items-center justify-center bg-white transition-all duration-500 ${
         fadeOut ? "opacity-0" : "opacity-100"
       }`}
     >
