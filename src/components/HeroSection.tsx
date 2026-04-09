@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
-import ScrollIndicator from "./ScrollIndicator";
+
 import TextReveal from "./TextReveal";
 import MagneticButton from "./MagneticButton";
 import RippleButton from "./RippleButton";
