@@ -9,6 +9,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 // Partner logos (SVG/PNG, white on transparent)
 import awsLogo from "@/assets/partners/aws.svg";
 import checkpointLogo from "@/assets/partners/checkpoint.svg";
+import everpureLogo from "@/assets/partners/everpure.svg";
 import exagridLogo from "@/assets/partners/exagrid.svg";
 import extremeLogo from "@/assets/partners/extreme.svg";
 import gigamonLogo from "@/assets/partners/gigamon.png";
@@ -21,6 +22,7 @@ import veeamLogo from "@/assets/partners/veeam.svg";
 const heroPartners = [
   { name: "AWS", logo: awsLogo, h: "h-6 md:h-7" },
   { name: "Check Point", logo: checkpointLogo, h: "h-5 md:h-6" },
+  { name: "Everpure", logo: everpureLogo, h: "h-5 md:h-6" },
   { name: "ExaGrid", logo: exagridLogo, h: "h-5 md:h-6" },
   { name: "Extreme Networks", logo: extremeLogo, h: "h-5 md:h-6" },
   { name: "Gigamon", logo: gigamonLogo, h: "h-5 md:h-6" },
