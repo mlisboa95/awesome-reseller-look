@@ -43,10 +43,10 @@ const AboutSection = () => {
   ];
 
   const differentiators = [
-    "AWS cloud architecture expertise",
-    "Full lifecycle delivery via AWS Marketplace",
-    "Compliance-first operations framework",
-    "Long-term partnership model with dedicated support",
+    "Multi-vendor certified team (50+ active certifications)",
+    "AWS Marketplace procurement & deployment",
+    "On-prem, hybrid, and cloud delivery",
+    "Dedicated project management & long-term support",
   ];
 
   return (
