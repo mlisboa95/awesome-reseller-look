@@ -1,4 +1,4 @@
-import { ShieldCheck, Network, CloudCog, HeadsetIcon, Cog, Camera, ArrowRight } from "lucide-react";
+import { ShieldCheck, Network, CloudCog, HeadsetIcon, Cog, Camera } from "lucide-react";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -23,7 +23,7 @@ const ServicesSection = () => {
     {
       icon: CloudCog,
       title: t("services.s3.title"),
-      tags: "HCI • Storage • Cloud • Containers",
+      tags: "HCI • Storage • AWS • Containers",
       description: t("services.s3.desc"),
     },
     {
@@ -32,29 +32,28 @@ const ServicesSection = () => {
       tags: "CCTV • Access Control • LPR • Smart City",
       description: t("services.s4.desc"),
     },
-  ];
-
-  const otherServices = [
     {
       icon: HeadsetIcon,
       title: t("services.s5.title"),
+      tags: "SLA • 24/7 • NOC • Monitoring",
       description: t("services.s5.desc"),
     },
     {
       icon: Cog,
       title: t("services.s6.title"),
+      tags: "Assessment • Architecture • Advisory",
       description: t("services.s6.desc"),
     },
   ];
 
   return (
-    <section id="servicos" className="py-20 md:py-28 relative overflow-hidden bg-gray-50">
+    <section id="servicos" className="py-14 md:py-20 relative overflow-hidden bg-gray-50">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
         <div
           ref={headerRef}
-          className={`text-center max-w-3xl mx-auto mb-14 scroll-fade-up ${headerVisible ? 'visible' : ''}`}
+          className={`max-w-3xl mb-10 scroll-fade-up ${headerVisible ? 'visible' : ''}`}
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase border border-primary/30 text-primary bg-primary/5 mb-6">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase border border-primary/30 text-primary bg-primary/5 mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-primary" />
             {t("services.label")}
           </span>
@@ -66,50 +65,19 @@ const ServicesSection = () => {
 
         <div
           ref={gridRef}
-          className={`stagger-children ${gridVisible ? 'visible' : ''}`}
+          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-200 rounded-2xl overflow-hidden stagger-children ${gridVisible ? 'visible' : ''}`}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
-            {services.map((service) => (
-              <div
-                key={service.title}
-                className="group relative p-7 rounded-2xl bg-white border border-gray-200 hover:border-primary/30 hover:shadow-lg transition-all duration-400"
-              >
-                <div className="flex items-start justify-between mb-5">
-                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/15 transition-colors duration-300">
-                    <service.icon className="w-7 h-7 text-primary" />
-                  </div>
-                  <div className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center transition-all duration-300 group-hover:border-primary group-hover:bg-primary group-hover:text-white">
-                    <ArrowRight className="w-4 h-4" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-display font-bold text-gray-900 mb-2">{service.title}</h3>
-                <p className="text-xs font-medium text-primary/70 mb-3 tracking-wide">{service.tags}</p>
-                <p className="text-sm text-gray-500 leading-relaxed line-clamp-3">{service.description}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {otherServices.map((service) => (
-              <div
-                key={service.title}
-                className="group relative p-6 rounded-2xl bg-white border border-gray-200 hover:border-primary/30 hover:shadow-lg transition-all duration-400"
-              >
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/15 transition-colors duration-300">
-                    <service.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-display font-bold text-gray-900 mb-1">{service.title}</h3>
-                    <p className="text-sm text-gray-500 leading-relaxed">{service.description}</p>
-                  </div>
-                  <div className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:border-primary group-hover:bg-primary group-hover:text-white">
-                    <ArrowRight className="w-4 h-4" />
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          {services.map((service) => (
+            <div
+              key={service.title}
+              className="bg-white p-7 group"
+            >
+              <service.icon className="w-7 h-7 text-primary mb-5" />
+              <h3 className="text-lg font-display font-bold text-gray-900 mb-2">{service.title}</h3>
+              <p className="text-xs font-semibold text-primary/60 mb-3 tracking-wide uppercase">{service.tags}</p>
+              <p className="text-sm text-gray-500 leading-relaxed">{service.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
