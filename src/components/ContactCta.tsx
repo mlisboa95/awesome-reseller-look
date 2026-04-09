@@ -7,7 +7,7 @@ const ContactCta = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-20 md:py-28 relative z-10 bg-gray-50 overflow-hidden">
+    <section className="py-12 md:py-16 relative z-10 bg-gray-50 overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <div
           ref={ref}

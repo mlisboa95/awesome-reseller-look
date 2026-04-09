@@ -69,10 +69,10 @@ const translations: Record<string, string> = {
   "partners.titleEnd": "",
 
   // Contact CTA
-  "cta.badge": "Let's Talk",
-  "cta.title": "Let's talk about your",
-  "cta.titleHighlight": "project?",
-  "cta.description": "Our team is ready to understand your environment, evaluate your architecture, and design the right solution — with tailored pricing and seamless procurement through AWS Marketplace.",
+  "cta.badge": "Get Started",
+  "cta.title": "Ready to build on",
+  "cta.titleHighlight": "AWS?",
+  "cta.description": "Tell us about your environment — we'll design the solution and handle procurement through AWS Marketplace.",
   "cta.button": "Contact Us",
 
   // Footer
