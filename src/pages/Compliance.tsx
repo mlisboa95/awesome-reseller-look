@@ -235,7 +235,7 @@ const Compliance = () => {
 
                 <p className="text-xs text-muted-foreground text-center">
                   {t("compliance.privacyNote")}{" "}
-                  <a href="/privacidade" className="text-primary hover:underline">
+                  <a href="/privacy" className="text-primary hover:underline">
                     {t("footer.privacy")}
                   </a>
                   .
