@@ -16,7 +16,7 @@ const translations: Record<string, string> = {
   "nav.portal": "Get in Touch",
 
   // Hero
-  "hero.eyebrow": "AWS Marketplace Channel Partner",
+  "hero.eyebrow": "Enterprise Technology Integrator",
   "hero.title1": "Technology solutions,",
   "hero.title2": "expertly delivered.",
   "hero.cta1": "Our Solutions",
