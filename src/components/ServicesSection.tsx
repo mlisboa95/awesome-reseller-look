@@ -23,7 +23,7 @@ const ServicesSection = () => {
     {
       icon: CloudCog,
       title: t("services.s3.title"),
-      tags: "HCI • Storage • AWS • Containers",
+      tags: "HCI • Storage • Cloud • Containers",
       description: t("services.s3.desc"),
     },
     {
