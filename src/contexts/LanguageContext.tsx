@@ -26,7 +26,7 @@ const translations: Record<string, string> = {
   "about.label": "About Us",
   "about.title": "22 years connecting technology to real",
   "about.titleHighlight": "outcomes",
-  "about.description": "We're a Brazilian-born technology integrator with a US branch in Boca Raton, FL. We help enterprises and public sector organizations design, deploy, and operate secure IT infrastructure — from the data center to AWS cloud.",
+  "about.description": "We're a Brazilian-born technology integrator with a US branch in Boca Raton, FL. We help enterprises and public sector organizations design, deploy, and operate secure IT infrastructure — from the data center to the cloud.",
   "about.stat1": "years of experience",
   "about.stat2": "active certifications",
   "about.stat3": "projects delivered",
@@ -55,12 +55,12 @@ const translations: Record<string, string> = {
   "whyus.titleHighlight": "choose us?",
   "whyus.r1.title": "Security & Trust",
   "whyus.r1.desc": "Robust compliance framework and industry certifications ensuring integrity and transparency in all operations.",
-  "whyus.r2.title": "AWS & Vendor Expertise",
-  "whyus.r2.desc": "Team with 50+ active certifications from leading technology vendors, with deep expertise in AWS cloud architecture and services.",
+  "whyus.r2.title": "Multi-Vendor Expertise",
+  "whyus.r2.desc": "Team with 50+ active certifications from leading technology vendors, with deep expertise in cloud architecture and enterprise infrastructure.",
   "whyus.r3.title": "Long-Term Partnership",
   "whyus.r3.desc": "Relationship model that prioritizes technical proximity, methodology, and transparency.",
   "whyus.r4.title": "Complete Delivery",
-  "whyus.r4.desc": "From architecture to ongoing support, we manage the complete lifecycle — with tailored procurement through AWS Marketplace.",
+  "whyus.r4.desc": "From architecture to ongoing support, we manage the complete lifecycle — with tailored procurement and vendor management.",
 
   // Partners
   "partners.label": "15+ Global Partners",
@@ -70,9 +70,9 @@ const translations: Record<string, string> = {
 
   // Contact CTA
   "cta.badge": "Get Started",
-  "cta.title": "Ready to build on",
-  "cta.titleHighlight": "AWS?",
-  "cta.description": "Tell us about your environment — we'll design the solution and handle procurement through AWS Marketplace.",
+  "cta.title": "Ready to",
+  "cta.titleHighlight": "start?",
+  "cta.description": "Tell us about your environment — we'll design the right solution and manage the entire delivery.",
   "cta.button": "Contact Us",
 
   // Footer

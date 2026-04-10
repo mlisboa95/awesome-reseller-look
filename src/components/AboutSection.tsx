@@ -44,7 +44,7 @@ const AboutSection = () => {
 
   const differentiators = [
     "Multi-vendor certified team (50+ active certifications)",
-    "AWS Marketplace procurement & deployment",
+    "Tailored procurement & vendor management",
     "On-prem, hybrid, and cloud delivery",
     "Dedicated project management & long-term support",
   ];
