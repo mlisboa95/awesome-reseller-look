@@ -3,6 +3,10 @@ import { forwardRef } from "react";
 import logoMahvla from "@/assets/logo-mahvla-footer.png";
 import { useLanguage } from "@/contexts/LanguageContext";
 
+interface FooterProps {
+  showCta?: boolean;
+}
+
 const Footer = forwardRef<HTMLElement, FooterProps>(({ showCta = true }, ref) => {
   const { t } = useLanguage();
 
