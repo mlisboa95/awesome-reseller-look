@@ -72,11 +72,17 @@ const HeroSection = () => {
             </h1>
           </TextReveal>
 
+          <TextReveal delay={600}>
+            <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl leading-relaxed">
+              {t("hero.support")}
+            </p>
+          </TextReveal>
+
           <TextReveal delay={800}>
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <MagneticButton strength={0.15}>
                 <RippleButton
-                  href="#servicos"
+                  href="mailto:contact@mahvla.com"
                   className="cta-button inline-flex items-center justify-center gap-3 px-7 py-3.5 text-sm font-semibold rounded-full text-primary-foreground"
                 >
                   {t("hero.cta1")}
@@ -84,18 +90,6 @@ const HeroSection = () => {
                     <ArrowRight className="w-4 h-4" />
                   </span>
                 </RippleButton>
-              </MagneticButton>
-
-              <MagneticButton strength={0.15}>
-                <a
-                  href="#sobre"
-                  className="group inline-flex items-center justify-center gap-3 px-7 py-3.5 text-sm font-medium rounded-full border border-border text-foreground hover:border-primary/50 transition-all duration-300"
-                >
-                  {t("hero.cta2")}
-                  <span className="w-8 h-8 rounded-full border border-border flex items-center justify-center group-hover:border-primary/50 transition-colors">
-                    <ArrowRight className="w-4 h-4" />
-                  </span>
-                </a>
               </MagneticButton>
             </div>
           </TextReveal>
