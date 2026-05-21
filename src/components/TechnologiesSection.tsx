@@ -6,15 +6,21 @@ import arista from "@/assets/partners/arista.jpg";
 import hpe from "@/assets/partners/hpe.jpg";
 import nutanix from "@/assets/partners/nutanix.jpg";
 import trend from "@/assets/partners/trend.jpg";
+import exagrid from "@/assets/partners/exagrid.jpg";
+import gigamon from "@/assets/partners/gigamon.jpg";
+import riverbed from "@/assets/partners/riverbed.jpg";
 
 const vendors = [
   { name: "Veeam", logo: veeam },
   { name: "Check Point", logo: checkpoint },
   { name: "Extreme Networks", logo: extreme },
   { name: "Arista", logo: arista },
-  { name: "HPE Aruba", logo: hpe },
+  { name: "HPE", logo: hpe },
   { name: "Nutanix", logo: nutanix },
   { name: "Trend Micro", logo: trend },
+  { name: "ExaGrid", logo: exagrid },
+  { name: "Gigamon", logo: gigamon },
+  { name: "Riverbed", logo: riverbed },
 ];
 
 const TechnologiesSection = () => {
@@ -38,7 +44,7 @@ const TechnologiesSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-px bg-gray-200 rounded-2xl overflow-hidden border border-gray-200">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-5 gap-px bg-gray-200 rounded-2xl overflow-hidden border border-gray-200">
           {vendors.map((v) => (
             <div
               key={v.name}
