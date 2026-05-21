@@ -16,38 +16,38 @@ const translations: Record<string, string> = {
   "nav.portal": "Get in Touch",
 
   // Hero
-  "hero.eyebrow": "Enterprise Technology Integrator",
-  "hero.title1": "Technology solutions,",
-  "hero.title2": "expertly delivered.",
-  "hero.cta1": "Our Solutions",
-  "hero.cta2": "Why Mahvla",
+  "hero.eyebrow": "U.S. Technology Partner",
+  "hero.title1": "Cybersecurity, cloud, and",
+  "hero.title2": "networking on AWS.",
+  "hero.support": "Mahvla Group LLC is the U.S. arm of a technology group with 20+ years delivering projects across the Americas.",
+  "hero.cta1": "Contact us",
 
   // About
   "about.label": "About Us",
-  "about.title": "22 years connecting technology to real",
-  "about.titleHighlight": "outcomes",
-  "about.description": "We're a Brazilian-born technology integrator with a US branch in Boca Raton, FL. We help enterprises and public sector organizations design, deploy, and operate secure IT infrastructure — from the data center to the cloud.",
-  "about.stat1": "years of experience",
+  "about.title": "The U.S. arm of an established",
+  "about.titleHighlight": "technology group.",
+  "about.description": "Mahvla Group LLC is the U.S. entity of an established technology group with 20+ years of project delivery across the Americas. The 20-year track record belongs to the group; Mahvla Group LLC is its U.S. presence, headquartered in Boca Raton, Florida. We help organizations design, deploy, and manage cybersecurity, cloud infrastructure, and networking solutions on AWS, and procure software through AWS Marketplace as a Channel Partner.",
+  "about.stat1": "years of group experience",
   "about.stat2": "active certifications",
   "about.stat3": "projects delivered",
   "about.stat4": "clients served",
 
   // Services
-  "services.label": "Core Capabilities",
-  "services.title": "Our Practice",
-  "services.titleHighlight": "Areas",
+  "services.label": "What we do",
+  "services.title": "What",
+  "services.titleHighlight": "we do.",
   "services.s1.title": "Networks & Connectivity",
   "services.s1.desc": "Enterprise-grade network architecture spanning campus LAN/WLAN, WAN optimization, SD-WAN overlays, and unified communications. We deliver end-to-end visibility with NPM tooling and 24/7 NOC operations.",
   "services.s2.title": "Cybersecurity",
   "services.s2.desc": "Multi-layered defense strategies built around NGFW, WAF, EDR/XDR, and Zero Trust frameworks. We implement identity governance (IAM/PAM), SASE architectures, and threat detection pipelines aligned to NIST and CIS controls.",
   "services.s3.title": "Infrastructure & Cloud",
-  "services.s3.desc": "Hybrid and multi-cloud environments engineered for performance and resilience — from hyperconverged platforms and enterprise storage to AWS workload migration, containerized deployments, and infrastructure-as-code automation.",
+  "services.s3.desc": "Hybrid and multi-cloud environments engineered for performance and resilience, from hyperconverged platforms and enterprise storage to AWS workload migration, containerized deployments, and infrastructure-as-code automation.",
   "services.s4.title": "Physical Security & Smart Cities",
   "services.s4.desc": "Integrated surveillance ecosystems combining IP CCTV, biometric access control, LPR, and AI-powered analytics. Proven deployments across government facilities, critical infrastructure, and urban mobility projects.",
-  "services.s5.title": "Managed Operations & Support",
-  "services.s5.desc": "Dedicated technical teams providing assisted operations, proactive monitoring, and maintenance contracts with guaranteed SLAs — extending your IT capacity without expanding headcount.",
-  "services.s6.title": "Consulting & Architecture",
-  "services.s6.desc": "Technology assessments, solution architecture, and vendor-neutral advisory services. We translate business requirements into infrastructure blueprints with measurable ROI and clear implementation roadmaps.",
+  "services.s5.title": "Local Support & Project Management",
+  "services.s5.desc": "Dedicated technical teams providing assisted operations, proactive monitoring, and maintenance contracts with guaranteed SLAs, plus dedicated project management for end-to-end delivery.",
+  "services.s6.title": "AWS Marketplace Procurement",
+  "services.s6.desc": "Software procurement through AWS Marketplace via Channel Partner Private Offers (CPPO), simplifying licensing, billing, and contract negotiation for organizations standardizing on AWS.",
 
   // Why Us
   "whyus.label": "Why Choose Us",
@@ -69,11 +69,11 @@ const translations: Record<string, string> = {
   "partners.titleEnd": "",
 
   // Contact CTA
-  "cta.badge": "Get Started",
+  "cta.badge": "Get in touch",
   "cta.title": "Ready to",
   "cta.titleHighlight": "start?",
-  "cta.description": "Tell us about your environment — we'll design the right solution and manage the entire delivery.",
-  "cta.button": "Contact Us",
+  "cta.description": "Tell us about your environment and we will design the right solution and manage the entire delivery.",
+  "cta.button": "Contact us",
 
   // Footer
   "footer.office": "Offices",

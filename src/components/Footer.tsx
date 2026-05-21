@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { forwardRef } from "react";
 import logoMahvla from "@/assets/logo-mahvla-footer.png";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -34,15 +34,6 @@ const Footer = forwardRef<HTMLElement, FooterProps>(({ showCta = true }, ref) =>
                   <p>United States</p>
                 </div>
               </div>
-              <div className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                <div>
-                  <p className="text-foreground font-medium mb-1">Brasília, DF</p>
-                  <p>SRTVS Qd 701 Cj. L N. 38</p>
-                  <p>Bloco 01, Salas 8, 9 e 10</p>
-                  <p>Asa Sul, Brasília - DF, Brazil</p>
-                </div>
-              </div>
             </address>
           </div>
 
@@ -60,10 +51,6 @@ const Footer = forwardRef<HTMLElement, FooterProps>(({ showCta = true }, ref) =>
                 <Mail className="w-4 h-4" />
                 support@mahvla.com
               </a>
-              <a href="tel:+556121914900" className="flex items-center gap-3 text-muted-foreground text-sm hover:text-primary transition-colors">
-                <Phone className="w-4 h-4" />
-                +55 (61) 2191-4900
-              </a>
             </div>
           </div>
         </div>
@@ -73,7 +60,7 @@ const Footer = forwardRef<HTMLElement, FooterProps>(({ showCta = true }, ref) =>
       <div className="border-t border-border">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-muted-foreground/60 text-sm">
-            © {new Date().getFullYear()} Mahvla Group LLC — {t("footer.copyright")}
+            © {new Date().getFullYear()} Mahvla Group LLC. {t("footer.copyright")}
           </p>
           <div className="flex items-center gap-6">
             <a href="/privacy" className="text-muted-foreground/60 text-sm hover:text-primary transition-colors underline underline-offset-4">

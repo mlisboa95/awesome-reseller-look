@@ -8,42 +8,12 @@ const ServicesSection = () => {
   const { t } = useLanguage();
 
   const services = [
-    {
-      icon: Network,
-      title: t("services.s1.title"),
-      tags: "LAN • WLAN • SD-WAN • NOC • VoIP",
-      description: t("services.s1.desc"),
-    },
-    {
-      icon: ShieldCheck,
-      title: t("services.s2.title"),
-      tags: "NGFW • WAF • EDR/XDR • ZTNA • SASE",
-      description: t("services.s2.desc"),
-    },
-    {
-      icon: CloudCog,
-      title: t("services.s3.title"),
-      tags: "HCI • Storage • Cloud • Containers",
-      description: t("services.s3.desc"),
-    },
-    {
-      icon: Camera,
-      title: t("services.s4.title"),
-      tags: "CCTV • Access Control • LPR • Smart City",
-      description: t("services.s4.desc"),
-    },
-    {
-      icon: HeadsetIcon,
-      title: t("services.s5.title"),
-      tags: "SLA • 24/7 • NOC • Monitoring",
-      description: t("services.s5.desc"),
-    },
-    {
-      icon: Cog,
-      title: t("services.s6.title"),
-      tags: "Assessment • Architecture • Advisory",
-      description: t("services.s6.desc"),
-    },
+    { icon: ShieldCheck, title: t("services.s2.title"), description: t("services.s2.desc") },
+    { icon: CloudCog, title: t("services.s3.title"), description: t("services.s3.desc") },
+    { icon: Network, title: t("services.s1.title"), description: t("services.s1.desc") },
+    { icon: Cog, title: t("services.s6.title"), description: t("services.s6.desc") },
+    { icon: HeadsetIcon, title: t("services.s5.title"), description: t("services.s5.desc") },
+    { icon: Camera, title: t("services.s4.title"), description: t("services.s4.desc") },
   ];
 
   return (
@@ -53,10 +23,9 @@ const ServicesSection = () => {
           ref={headerRef}
           className={`max-w-3xl mb-10 scroll-fade-up ${headerVisible ? 'visible' : ''}`}
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase border border-primary/30 text-primary bg-primary/5 mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+          <p className="text-xs font-semibold tracking-[0.2em] uppercase text-primary mb-4">
             {t("services.label")}
-          </span>
+          </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight text-gray-900 leading-[1.1]">
             {t("services.title")}{" "}
             <span className="text-primary">{t("services.titleHighlight")}</span>
@@ -74,7 +43,6 @@ const ServicesSection = () => {
             >
               <service.icon className="w-7 h-7 text-primary mb-5" />
               <h3 className="text-lg font-display font-bold text-gray-900 mb-2">{service.title}</h3>
-              <p className="text-xs font-semibold text-primary/60 mb-3 tracking-wide uppercase">{service.tags}</p>
               <p className="text-sm text-gray-500 leading-relaxed">{service.description}</p>
             </div>
           ))}
