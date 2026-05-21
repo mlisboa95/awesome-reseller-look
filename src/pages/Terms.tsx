@@ -28,7 +28,7 @@ const Terms = () => {
     },
     {
       title: "4. Intellectual Property",
-      content: "All content on this website — including text, graphics, logos, images, and software — is the property of Mahvla Group LLC or its licensors and is protected by applicable intellectual property laws. Unauthorized use of any materials may violate copyright, trademark, and other laws."
+      content: "All content on this website, including text, graphics, logos, images, and software, is the property of Mahvla Group LLC or its licensors and is protected by applicable intellectual property laws. Unauthorized use of any materials may violate copyright, trademark, and other laws."
     },
     {
       title: "5. Limitation of Liability",
