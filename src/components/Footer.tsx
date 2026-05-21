@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { forwardRef } from "react";
 import logoMahvla from "@/assets/logo-mahvla-footer.png";
 import { useLanguage } from "@/contexts/LanguageContext";
