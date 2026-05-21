@@ -18,8 +18,9 @@ const translations: Record<string, string> = {
   // Hero
   "hero.eyebrow": "U.S. Technology Partner",
   "hero.title1": "Cybersecurity, cloud, and",
-  "hero.title2": "networking on AWS.",
+  "hero.title2": "networking.",
   "hero.support": "Mahvla Group LLC is the U.S. arm of a technology group with 20+ years delivering projects across the Americas.",
+  "hero.support2": "We design, deploy, and manage solutions on AWS and on premises.",
   "hero.cta1": "Contact us",
 
   // About
