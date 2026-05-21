@@ -42,13 +42,6 @@ const AboutSection = () => {
     { value: 100, suffix: "+", label: t("about.stat4") },
   ];
 
-  const differentiators = [
-    "Multi-vendor certified team (50+ active certifications)",
-    "Tailored procurement & vendor management",
-    "On-prem, hybrid, and cloud delivery",
-    "Dedicated project management & long-term support",
-  ];
-
   return (
     <section id="sobre" className="py-14 md:py-20 relative z-10">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
@@ -56,15 +49,14 @@ const AboutSection = () => {
           ref={headerRef}
           className={`max-w-3xl mb-10 scroll-fade-up ${headerVisible ? 'visible' : ''}`}
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase border border-primary/30 text-primary bg-primary/5 mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+          <p className="text-xs font-semibold tracking-[0.2em] uppercase text-primary mb-4">
             {t("about.label")}
-          </span>
+          </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight text-gray-900 mb-4 leading-[1.1]">
             {t("about.title")}{" "}
             <span className="text-primary">{t("about.titleHighlight")}</span>
           </h2>
-          <p className="text-base md:text-lg text-gray-500 leading-relaxed max-w-2xl">
+          <p className="text-base md:text-lg text-gray-500 leading-relaxed max-w-3xl">
             {t("about.description")}
           </p>
         </div>
@@ -86,19 +78,6 @@ const AboutSection = () => {
                 </div>
                 <p className="text-sm text-gray-500">{stat.label}</p>
               </div>
-            ))}
-          </div>
-
-          {/* Differentiators row */}
-          <div className="flex flex-wrap gap-3 pt-2">
-            {differentiators.map((item) => (
-              <span
-                key={item}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200"
-              >
-                <span className="w-1 h-1 rounded-full bg-primary" />
-                {item}
-              </span>
             ))}
           </div>
         </div>
